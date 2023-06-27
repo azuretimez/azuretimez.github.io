@@ -1,0 +1,4 @@
+deploy:
+  type: git
+  repo: git@github.com:azuretimez/azuretimez.github.io.git
+  branch: main
