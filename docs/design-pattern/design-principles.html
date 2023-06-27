@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2. 面向对象设计原则概述 | 路漫漫其修远兮，吾将上下而求索</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="个人展示网站">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.a5fc1f3a.css" as="style"><link rel="preload" href="/assets/js/app.e36a6f16.js" as="script"><link rel="preload" href="/assets/js/3.c46e8d0c.js" as="script"><link rel="preload" href="/assets/js/1.ae8c2f5c.js" as="script"><link rel="preload" href="/assets/js/9.23656f5d.js" as="script"><link rel="prefetch" href="/assets/js/10.1cf64c3d.js"><link rel="prefetch" href="/assets/js/100.8e0cb6e9.js"><link rel="prefetch" href="/assets/js/101.50c061c6.js"><link rel="prefetch" href="/assets/js/102.2057e243.js"><link rel="prefetch" href="/assets/js/103.e1af4b24.js"><link rel="prefetch" href="/assets/js/104.3273f8c1.js"><link rel="prefetch" href="/assets/js/105.ec308f95.js"><link rel="prefetch" href="/assets/js/106.b201fdca.js"><link rel="prefetch" href="/assets/js/107.31e56d88.js"><link rel="prefetch" href="/assets/js/108.b8e686e6.js"><link rel="prefetch" href="/assets/js/109.11662bc0.js"><link rel="prefetch" href="/assets/js/11.d89e231c.js"><link rel="prefetch" href="/assets/js/110.b87ce165.js"><link rel="prefetch" href="/assets/js/111.bccde66d.js"><link rel="prefetch" href="/assets/js/112.ff02760d.js"><link rel="prefetch" href="/assets/js/113.90a25d0e.js"><link rel="prefetch" href="/assets/js/114.dfd96931.js"><link rel="prefetch" href="/assets/js/115.e30e94bb.js"><link rel="prefetch" href="/assets/js/116.aea17da1.js"><link rel="prefetch" href="/assets/js/117.f2e5c499.js"><link rel="prefetch" href="/assets/js/118.4ded9ace.js"><link rel="prefetch" href="/assets/js/119.24b0e5fe.js"><link rel="prefetch" href="/assets/js/12.a929a20b.js"><link rel="prefetch" href="/assets/js/120.efc30fc4.js"><link rel="prefetch" href="/assets/js/121.9d07a307.js"><link rel="prefetch" href="/assets/js/122.4ec90e5c.js"><link rel="prefetch" href="/assets/js/123.40937fbf.js"><link rel="prefetch" href="/assets/js/124.e1f314f1.js"><link rel="prefetch" href="/assets/js/125.05bd4ef7.js"><link rel="prefetch" href="/assets/js/126.d4a7faf6.js"><link rel="prefetch" href="/assets/js/127.d2128e03.js"><link rel="prefetch" href="/assets/js/128.a05d604e.js"><link rel="prefetch" href="/assets/js/129.6105945f.js"><link rel="prefetch" href="/assets/js/13.360853c7.js"><link rel="prefetch" href="/assets/js/130.9b8daf1c.js"><link rel="prefetch" href="/assets/js/131.cecfa697.js"><link rel="prefetch" href="/assets/js/132.c95442e6.js"><link rel="prefetch" href="/assets/js/133.539ab718.js"><link rel="prefetch" href="/assets/js/134.cdfce489.js"><link rel="prefetch" href="/assets/js/135.c123dac0.js"><link rel="prefetch" href="/assets/js/136.985a226d.js"><link rel="prefetch" href="/assets/js/137.0aee31b8.js"><link rel="prefetch" href="/assets/js/138.d2509857.js"><link rel="prefetch" href="/assets/js/139.a96a3668.js"><link rel="prefetch" href="/assets/js/14.c195e003.js"><link rel="prefetch" href="/assets/js/140.e19a3e11.js"><link rel="prefetch" href="/assets/js/141.fdc0c06c.js"><link rel="prefetch" href="/assets/js/142.2cd6f75b.js"><link rel="prefetch" href="/assets/js/143.609899b6.js"><link rel="prefetch" href="/assets/js/144.ff242386.js"><link rel="prefetch" href="/assets/js/145.b2b79665.js"><link rel="prefetch" href="/assets/js/146.039accd2.js"><link rel="prefetch" href="/assets/js/147.95319884.js"><link rel="prefetch" href="/assets/js/148.6c1f3479.js"><link rel="prefetch" href="/assets/js/149.eb07bb5f.js"><link rel="prefetch" href="/assets/js/15.549a8f95.js"><link rel="prefetch" href="/assets/js/150.84a65913.js"><link rel="prefetch" href="/assets/js/151.915c8722.js"><link rel="prefetch" href="/assets/js/152.0d23ca3e.js"><link rel="prefetch" href="/assets/js/153.4b006757.js"><link rel="prefetch" href="/assets/js/154.e8667872.js"><link rel="prefetch" href="/assets/js/155.1d66b3f4.js"><link rel="prefetch" href="/assets/js/156.39e659e5.js"><link rel="prefetch" href="/assets/js/157.f281e5ad.js"><link rel="prefetch" href="/assets/js/158.aa34863e.js"><link rel="prefetch" href="/assets/js/159.a640b562.js"><link rel="prefetch" href="/assets/js/16.a4a3b75b.js"><link rel="prefetch" href="/assets/js/160.c14ccadf.js"><link rel="prefetch" href="/assets/js/161.49444813.js"><link rel="prefetch" href="/assets/js/162.d4361af0.js"><link rel="prefetch" href="/assets/js/163.7789f841.js"><link rel="prefetch" href="/assets/js/164.536683be.js"><link rel="prefetch" href="/assets/js/165.e82e5352.js"><link rel="prefetch" href="/assets/js/166.08275b02.js"><link rel="prefetch" href="/assets/js/167.b8b0b20f.js"><link rel="prefetch" href="/assets/js/168.4bc37c3e.js"><link rel="prefetch" href="/assets/js/169.a901cacb.js"><link rel="prefetch" href="/assets/js/17.d0e1d5b9.js"><link rel="prefetch" href="/assets/js/170.4e6b026d.js"><link rel="prefetch" href="/assets/js/171.0d84b945.js"><link rel="prefetch" href="/assets/js/172.00e188a4.js"><link rel="prefetch" href="/assets/js/173.a79d19f4.js"><link rel="prefetch" href="/assets/js/174.5ac8a473.js"><link rel="prefetch" href="/assets/js/175.9d051d34.js"><link rel="prefetch" href="/assets/js/176.e001aacf.js"><link rel="prefetch" href="/assets/js/177.64e39367.js"><link rel="prefetch" href="/assets/js/178.31e998c6.js"><link rel="prefetch" href="/assets/js/179.39575261.js"><link rel="prefetch" href="/assets/js/18.6ff5524b.js"><link rel="prefetch" href="/assets/js/180.6a9ec275.js"><link rel="prefetch" href="/assets/js/19.066f4710.js"><link rel="prefetch" href="/assets/js/20.47c6945e.js"><link rel="prefetch" href="/assets/js/21.80d08d1a.js"><link rel="prefetch" href="/assets/js/22.0bf68511.js"><link rel="prefetch" href="/assets/js/23.cbd2da20.js"><link rel="prefetch" href="/assets/js/24.39334856.js"><link rel="prefetch" href="/assets/js/25.d2dc6939.js"><link rel="prefetch" href="/assets/js/26.b22f2659.js"><link rel="prefetch" href="/assets/js/27.fafb5d89.js"><link rel="prefetch" href="/assets/js/28.cc4e2dfa.js"><link rel="prefetch" href="/assets/js/29.051e1294.js"><link rel="prefetch" href="/assets/js/30.a43fa163.js"><link rel="prefetch" href="/assets/js/31.6687eda9.js"><link rel="prefetch" href="/assets/js/32.a11764ff.js"><link rel="prefetch" href="/assets/js/33.e3fb0fca.js"><link rel="prefetch" href="/assets/js/34.3a0b017f.js"><link rel="prefetch" href="/assets/js/35.0aa88a05.js"><link rel="prefetch" href="/assets/js/36.72771fbc.js"><link rel="prefetch" href="/assets/js/37.f82581be.js"><link rel="prefetch" href="/assets/js/38.16685a22.js"><link rel="prefetch" href="/assets/js/39.1f26208b.js"><link rel="prefetch" href="/assets/js/4.b776f0a5.js"><link rel="prefetch" href="/assets/js/40.46ab7f6b.js"><link rel="prefetch" href="/assets/js/41.7cb6f967.js"><link rel="prefetch" href="/assets/js/42.d7cd36c2.js"><link rel="prefetch" href="/assets/js/43.1e7c4d50.js"><link rel="prefetch" href="/assets/js/44.84217364.js"><link rel="prefetch" href="/assets/js/45.03dd1cc7.js"><link rel="prefetch" href="/assets/js/46.0b2d4aeb.js"><link rel="prefetch" href="/assets/js/47.59165cbe.js"><link rel="prefetch" href="/assets/js/48.fccb4afc.js"><link rel="prefetch" href="/assets/js/49.4b2640e3.js"><link rel="prefetch" href="/assets/js/5.4c2909d0.js"><link rel="prefetch" href="/assets/js/50.398ab329.js"><link rel="prefetch" href="/assets/js/51.e7ed2c25.js"><link rel="prefetch" href="/assets/js/52.490cf252.js"><link rel="prefetch" href="/assets/js/53.2fe8f7b5.js"><link rel="prefetch" href="/assets/js/54.a93e7e56.js"><link rel="prefetch" href="/assets/js/55.dc954fde.js"><link rel="prefetch" href="/assets/js/56.f5b55acc.js"><link rel="prefetch" href="/assets/js/57.7cd4dc0e.js"><link rel="prefetch" href="/assets/js/58.0ad5311b.js"><link rel="prefetch" href="/assets/js/59.1f4fee35.js"><link rel="prefetch" href="/assets/js/6.bbb54abe.js"><link rel="prefetch" href="/assets/js/60.71759f96.js"><link rel="prefetch" href="/assets/js/61.f4326786.js"><link rel="prefetch" href="/assets/js/62.3e089928.js"><link rel="prefetch" href="/assets/js/63.5f9c9020.js"><link rel="prefetch" href="/assets/js/64.8e972ad5.js"><link rel="prefetch" href="/assets/js/65.f9baf78c.js"><link rel="prefetch" href="/assets/js/66.6e6e1936.js"><link rel="prefetch" href="/assets/js/67.2d59a9ab.js"><link rel="prefetch" href="/assets/js/68.ffe32a4d.js"><link rel="prefetch" href="/assets/js/69.1cfc3fa9.js"><link rel="prefetch" href="/assets/js/7.761dcbd9.js"><link rel="prefetch" href="/assets/js/70.71000823.js"><link rel="prefetch" href="/assets/js/71.ba2bce19.js"><link rel="prefetch" href="/assets/js/72.3281b629.js"><link rel="prefetch" href="/assets/js/73.8e18302a.js"><link rel="prefetch" href="/assets/js/74.0ed4c579.js"><link rel="prefetch" href="/assets/js/75.4f3a1dd2.js"><link rel="prefetch" href="/assets/js/76.0d5688c9.js"><link rel="prefetch" href="/assets/js/77.b5a95948.js"><link rel="prefetch" href="/assets/js/78.cee29896.js"><link rel="prefetch" href="/assets/js/79.7364cccd.js"><link rel="prefetch" href="/assets/js/8.0b37599a.js"><link rel="prefetch" href="/assets/js/80.b3e7e887.js"><link rel="prefetch" href="/assets/js/81.845dc522.js"><link rel="prefetch" href="/assets/js/82.af5b833c.js"><link rel="prefetch" href="/assets/js/83.97404d49.js"><link rel="prefetch" href="/assets/js/84.0e15de87.js"><link rel="prefetch" href="/assets/js/85.4c7f8a2a.js"><link rel="prefetch" href="/assets/js/86.663f8f72.js"><link rel="prefetch" href="/assets/js/87.7e263a3b.js"><link rel="prefetch" href="/assets/js/88.9bde7046.js"><link rel="prefetch" href="/assets/js/89.b97ce8be.js"><link rel="prefetch" href="/assets/js/90.24ebf178.js"><link rel="prefetch" href="/assets/js/91.839071ab.js"><link rel="prefetch" href="/assets/js/92.b08db120.js"><link rel="prefetch" href="/assets/js/93.9cd39f03.js"><link rel="prefetch" href="/assets/js/94.dbe2b77e.js"><link rel="prefetch" href="/assets/js/95.2de8699b.js"><link rel="prefetch" href="/assets/js/96.7c2e0f96.js"><link rel="prefetch" href="/assets/js/97.6d8d45a0.js"><link rel="prefetch" href="/assets/js/98.df826acd.js"><link rel="prefetch" href="/assets/js/99.f6994c7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a5fc1f3a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>路漫漫其修远兮，吾将上下而求索</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>一个人可以走的很快，一群人可以走的更远</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>AzureTimez</span>
+            
+          <span data-v-4e82dffc>2013 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpeg" alt="路漫漫其修远兮，吾将上下而求索" class="logo"> <span class="site-name">路漫漫其修远兮，吾将上下而求索</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/qiankun/" class="nav-link"><i class="undefined"></i>
+  qiankun
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react,antd/" class="nav-link"><i class="undefined"></i>
+  react,antd
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Rollup/" class="nav-link"><i class="undefined"></i>
+  Rollup
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue2/" class="nav-link"><i class="undefined"></i>
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue3/" class="nav-link"><i class="undefined"></i>
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JS/" class="nav-link"><i class="undefined"></i>
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Low Code/" class="nav-link"><i class="undefined"></i>
+  Low Code
+</a></li><li class="dropdown-item"><!----> <a href="/categories/性能/" class="nav-link"><i class="undefined"></i>
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/categories/微前端/" class="nav-link"><i class="undefined"></i>
+  微前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可视化/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TS/" class="nav-link"><i class="undefined"></i>
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ES6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ssr/" class="nav-link"><i class="undefined"></i>
+  ssr
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/weapp/" class="nav-link"><i class="undefined"></i>
+  weapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hybrid/" class="nav-link"><i class="undefined"></i>
+  hybrid
+</a></li><li class="dropdown-item"><!----> <a href="/categories/flutter/" class="nav-link"><i class="undefined"></i>
+  flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/electron/" class="nav-link"><i class="undefined"></i>
+  electron
+</a></li><li class="dropdown-item"><!----> <a href="/categories/AST/" class="nav-link"><i class="undefined"></i>
+  AST
+</a></li><li class="dropdown-item"><!----> <a href="/categories/模块化/" class="nav-link"><i class="undefined"></i>
+  模块化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vite/" class="nav-link"><i class="undefined"></i>
+  vite
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器/" class="nav-link"><i class="undefined"></i>
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/categories/gulp/" class="nav-link"><i class="undefined"></i>
+  gulp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/canvas/" class="nav-link"><i class="undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webGL/" class="nav-link"><i class="undefined"></i>
+  webGL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ajax/" class="nav-link"><i class="undefined"></i>
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/categories/fetch/" class="nav-link"><i class="undefined"></i>
+  fetch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GC/" class="nav-link"><i class="undefined"></i>
+  GC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/avatar.jpeg" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    AzureTimez
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>170</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>44</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/qiankun/" class="nav-link"><i class="undefined"></i>
+  qiankun
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react,antd/" class="nav-link"><i class="undefined"></i>
+  react,antd
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Rollup/" class="nav-link"><i class="undefined"></i>
+  Rollup
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue2/" class="nav-link"><i class="undefined"></i>
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue3/" class="nav-link"><i class="undefined"></i>
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JS/" class="nav-link"><i class="undefined"></i>
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Low Code/" class="nav-link"><i class="undefined"></i>
+  Low Code
+</a></li><li class="dropdown-item"><!----> <a href="/categories/性能/" class="nav-link"><i class="undefined"></i>
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/categories/微前端/" class="nav-link"><i class="undefined"></i>
+  微前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可视化/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TS/" class="nav-link"><i class="undefined"></i>
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ES6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ssr/" class="nav-link"><i class="undefined"></i>
+  ssr
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/weapp/" class="nav-link"><i class="undefined"></i>
+  weapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hybrid/" class="nav-link"><i class="undefined"></i>
+  hybrid
+</a></li><li class="dropdown-item"><!----> <a href="/categories/flutter/" class="nav-link"><i class="undefined"></i>
+  flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/electron/" class="nav-link"><i class="undefined"></i>
+  electron
+</a></li><li class="dropdown-item"><!----> <a href="/categories/AST/" class="nav-link"><i class="undefined"></i>
+  AST
+</a></li><li class="dropdown-item"><!----> <a href="/categories/模块化/" class="nav-link"><i class="undefined"></i>
+  模块化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vite/" class="nav-link"><i class="undefined"></i>
+  vite
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器/" class="nav-link"><i class="undefined"></i>
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/categories/gulp/" class="nav-link"><i class="undefined"></i>
+  gulp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/canvas/" class="nav-link"><i class="undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webGL/" class="nav-link"><i class="undefined"></i>
+  webGL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ajax/" class="nav-link"><i class="undefined"></i>
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/categories/fetch/" class="nav-link"><i class="undefined"></i>
+  fetch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GC/" class="nav-link"><i class="undefined"></i>
+  GC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>2. 面向对象设计原则概述</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>AzureTimez</span>
+            
+          <span data-v-4e82dffc>2013 - </span>
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">2. 面向对象设计原则概述</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>AzureTimez</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2023/6/9</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>DesignPattern</span></i></div></div> <div class="theme-reco-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#开闭原则">开闭原则</a></li><li><a href="#单一职责原则">单一职责原则</a></li><li><a href="#里式替换原则">里式替换原则</a></li><li><a href="#依赖倒转原则">依赖倒转原则</a></li></ul></div><p></p> <h1 id="面向对象设计原则概述"><a href="#面向对象设计原则概述" class="header-anchor">#</a> 面向对象设计原则概述</h1> <p>对于面向对象软件系统的设计而言，在支持可维护性的同时，提高系统的可复用性 是一个至关重要的问题，如何同时提高一个软件系统的可维护性和可复用性是面向 对象设计需要解决的核心问题之一。在面向对象设计中，可维护性的复用是以设计 原则为基础的。每一个原则都蕴含一些面向对象设计的思想，可以从不同的角度提 升一个软件结构的设计水平。</p> <p>面向对象设计原则为支持可维护性复用而诞生，这些原则蕴含在很多设计模式中， 它们是从许多设计方案中总结出的指导性原则。面向对象设计原则也是我们用于评 价一个设计模式的使用效果的重要指标之一，在设计模式的学习中，大家经常会看 到诸如“XXX模式符合XXX原则”、“XXX模式违反了XXX原则”这样的语句。</p> <p>最常见的7种面向对象设计原则如下表所示:</p> <p>表1 7种常用的面向对象设计原则</p> <table><thead><tr><th style="text-align:center;">设计原则名称</th> <th style="text-align:center;">定 义</th> <th style="text-align:center;">使用频率</th></tr></thead> <tbody><tr><td style="text-align:center;">单一职责原则(Single Responsibility Principle, SRP)</td> <td style="text-align:center;">一个类只负责一个功能领域中 的相应职责</td> <td style="text-align:center;">★★★★☆</td></tr> <tr><td style="text-align:center;">开闭原则(Open-Closed Principle, OCP)</td> <td style="text-align:center;">软件实体应对扩展开放，而对 修改关闭</td> <td style="text-align:center;">★★★★★</td></tr> <tr><td style="text-align:center;">里氏代换原则(Liskov Substitution Principle, LSP)</td> <td style="text-align:center;">所有引用基类对象的地方能够透明地使用其子类的对象</td> <td style="text-align:center;">★★★★★</td></tr> <tr><td style="text-align:center;">依赖倒转原则(Dependence Inversion Principle, DIP)</td> <td style="text-align:center;">抽象不应该依赖于细节，细节 应该依赖于抽象</td> <td style="text-align:center;">★★★★★</td></tr> <tr><td style="text-align:center;">接口隔离原则(Interface Segregation Principle, ISP)</td> <td style="text-align:center;">使用多个专门的接口，而不使 用单一的总接口</td> <td style="text-align:center;">★★☆☆☆</td></tr> <tr><td style="text-align:center;">合成复用原则(Composite Reuse Principle, CRP)</td> <td style="text-align:center;">尽量使用对象组合，而不是继 承来达到复用的目的</td> <td style="text-align:center;">★★★★☆</td></tr> <tr><td style="text-align:center;">迪米特法则(Law of Demeter, LoD)</td> <td style="text-align:center;">一个软件实体应当尽可能少地 与其他实体发生相互作用</td> <td style="text-align:center;">★★★☆☆</td></tr></tbody></table> <h1 id="面向对象七大设计原则"><a href="#面向对象七大设计原则" class="header-anchor">#</a> 面向对象七大设计原则</h1> <h2 id="开闭原则"><a href="#开闭原则" class="header-anchor">#</a> 开闭原则</h2> <p>开闭原则是面向对象的可复用设计的第一块基石，它是最重要的面向对象设计原 则。开闭原则由Bertrand Meyer于1988年提出，其定义如下:<br> <code>1| 开闭原则(Open-Closed Principle, OCP):一个软件实体应当对扩展开放，对修改关闭。即软件实 体应尽量在不修改原有代码的情况下进行扩展。</code></p> <p>在开闭原则的定义中，软件实体可以指一个软件模块、一个由多个类组成的局部结 构或一个独立的类。</p> <p>任何软件都需要面临一个很重要的问题，即它们的需求会随时间的推移而发生变 化。当软件系统需要面对新的需求时，我们应该尽量保证系统的设计框架是稳定 的。如果一个软件设计符合开闭原则，那么可以非常方便地对系统进行扩展，而且 在扩展时无须修改现有代码，使得软件系统在拥有适应性和灵活性的同时具备较好 的稳定性和延续性。随着软件规模越来越大，软件寿命越来越长，软件维护成本越 来越高，设计满足开闭原则的软件系统也变得越来越重要。</p> <p>为了满足开闭原则，需要对系统进行抽象化设计，抽象化是开闭原则的关键。在 Java、C#等编程语言中，可以为系统定义一个相对稳定的抽象层，而将不同的实现 行为移至具体的实现层中完成。在很多面向对象编程语言中都提供了接口、抽象类 等机制，可以通过它们定义系统的抽象层，再通过具体类来进行扩展。如果需要修 改系统的行为，无须对抽象层进行任何改动，只需要增加新的具体类来实现新的业 务功能即可，实现在不修改已有代码的基础上扩展系统的功能，达到开闭原则的要 求。</p> <p>示例:
+Sunny软件公司开发的CRM系统可以显示各种类型的图表，如饼状图和柱状图等， 为了支持多种图表显示方式，原始设计方案如图1所示:</p> <p><img src="/assets/img/pr1.2940e42b.png" alt="alt 1">
+图1 初始设计方案结构图
+在ChartDisplay类的display()方法中存在如下代码片段:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>type<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">&quot;pie&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">PieChart</span> chart <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PieChart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  chart<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>type<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">&quot;bar&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token class-name">BarChart</span> chart <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BarChart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  chart<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>在该代码中，如果需要增加一个新的图表类，如折线图LineChart，则需要修改 ChartDisplay类的display()方法的源代码，增加新的判断逻辑，违反了开闭原则。</p> <p><strong>现对该系统进行重构，使之符合开闭原则。</strong></p> <p>在本实例中，由于在ChartDisplay类的display()方法中针对每一个图表类编程，因此 增加新的图表类不得不修改源代码。可以通过抽象化的方式对系统进行重构，使之 增加新的图表类时无须修改源代码，满足开闭原则。具体做法如下:</p> <ul><li>(1) 增加一个抽象图表类AbstractChart，将各种具体图表类作为其子类;</li> <li>(2) ChartDisplay类针对抽象图表类进行编程，由客户端来决定使用哪种具体图 表。</li></ul> <p>图2 重构后的结构图</p> <p>在图2中，我们引入了抽象图表类AbstractChart，且ChartDisplay针对抽象图表类进 行编程，并通过setChart()方法由客户端来设置实例化的具体图表对象，在 ChartDisplay的display()方法中调用chart对象的display()方法显示图表。如果需要增 加一种新的图表，如折线图LineChart，只需要将LineChart也作为AbstractChart的子 类，在客户端向ChartDisplay中注入一个LineChart对象即可，无须修改现有类库的 源代码。</p> <p><strong>注意:</strong> <code>1 | 因为xml和properties等格式的配置文件是纯文本文件，可以直接通过VI编辑器或记事本进行编辑，且 无须编译，因此在软件开发中，一般不把对配置文件的修改认为是对系统源代码的修改。如果一个系统在 扩展时只涉及到修改配置文件，而原有的Java代码或C#代码没有做任何修改，该系统即可认为是一个符 合开闭原则的系统。</code></p> <h2 id="单一职责原则"><a href="#单一职责原则" class="header-anchor">#</a> 单一职责原则</h2> <p>单一职责原则是最简单的面向对象设计原则，它用于控制类的粒度大小。单一职责 原则定义如下:
+<code>1 | 单一职责原则(Single Responsibility Principle, SRP):一个类只负责一个功能领域中的相应 职责，或者可以定义为:就一个类而言，应该只有一个引起它变化的原因。</code>
+单一职责原则告诉我们:<strong>一个类不能太“累”</strong>!在软件系统中，一个类(大到模 块，小到方法)承担的职责越多，它被复用的可能性就越小，而且一个类承担的职 责过多，就相当于将这些职责耦合在一起，当其中一个职责变化时，可能会影响其 他职责的运作，因此要将这些职责进行分离，将不同的职责封装在不同的类中，即 将不同的变化原因封装在不同的类中，如果多个职责总是同时发生改变则可将它们 封装在同一类中。</p> <p>单一职责原则是实现<strong>高内聚、低耦合</strong>的指导方针，它是最简单但又最难运用的原 则，需要设计人员发现类的不同职责并将其分离，而发现类的多重职责需要设计人 员具有较强的分析设计能力和相关实践经验。</p> <p><strong>下面通过一个简单实例来进一步分析单一职责原则:</strong>
+Sunny软件公司开发人员针对某CRM(Customer Relationship Management，客户 关系管理)系统中客户信息图形统计模块提出了如图1所示初始设计方案:</p> <p><img src="/assets/img/pr3.d91d5a9a.png" alt="alt 3"> <strong>图1 初始设计方案结构图</strong></p> <p>在图1中，CustomerDataChart类中的方法说明如下:</p> <ul><li>getConnection()方法用于连接数据库</li> <li>findCustomers()用于查询所有的客户信息</li> <li>createChart()用于创建图表</li> <li>displayChart()用于显示图表。</li></ul> <p>现使用单一职责原则对其进行重构。</p> <p>在图1中，CustomerDataChart类承担了太多的职责，既包含与数据库相关的方法， 又包含与图表生成和显示相关的方法。如果在其他类中也需要连接数据库或者使用 findCustomers()方法查询客户信息，则难以实现代码的重用。无论是修改数据库连 接方式还是修改图表显示方式都需要修改该类，它不止一个引起它变化的原因，违 背了单一职责原则。因此需要对该类进行拆分，使其满足单一职责原则，类 CustomerDataChart可拆分为如下三个类:</p> <ul><li>(1) DBUtil:负责连接数据库，包含数据库连接方法getConnection();</li> <li>(2) CustomerDAO:负责操作数据库中的Customer表，包含对Customer表的增 删改查等方法，如findCustomers();</li> <li>(3) CustomerDataChart:负责图表的生成和显示，包含方法createChart()和 displayChart()。</li></ul> <p>使用单一职责原则重构后的结构如图2所示:
+<img src="/assets/img/pr4.b2d7722b.png" alt="alt 4">
+图2 重构后的结构图</p> <h2 id="里式替换原则"><a href="#里式替换原则" class="header-anchor">#</a> 里式替换原则</h2> <p>里氏代换原则由2008年图灵奖得主、美国第一位计算机科学女博士<strong>Barbara Liskov</strong>教授和卡内基·梅隆大学Jeannette Wing教授于1994年提出。其严格表述如下:如果 对每一个类型为S的对象o1，都有类型为T的对象o2，使得以T定义的所有程序P在所 有的对象o1代换o2时，程序P的行为没有变化，那么类型S是类型T的子类型。这个 定义比较拗口且难以理解，因此我们一般使用它的另一个通俗版定义:</p> <p><code>1 | 里氏代换原则(Liskov Substitution Principle, LSP):所有引用基类(父类)的地方必须能透 明地使用其子类的对象。</code></p> <p>里氏代换原则告诉我们，**在软件中将一个基类对象替换成它的子类对象，程序将不 会产生任何错误和异常，反过来则不成立，如果一个软件实体使用的是一个子类对 象的话，那么它不一定能够使用基类对象。**例如:我喜欢动物，那我一定喜欢狗， 因为狗是动物的子类;但是我喜欢狗，不能据此断定我喜欢动物，因为我并不喜欢 老鼠，虽然它也是动物。</p> <p>例如有两个类，一个类为BaseClass，另一个是SubClass类，并且 SubClass类是BaseClass类的子类，那么一个方法如果可以接受一个 BaseClass类型的基类对象base的话，如:method1(base)，那么它 必然可以接受一个BaseClass类型的子类对象sub，method1(sub)能 够正常运行。反过来的代换不成立，如一个方法method2接受 BaseClass类型的子类对象sub为参数:method2(sub)，那么一般而 言不可以有method2(base)，除非是重载方法。</p> <p>里氏代换原则是实现开闭原则的重要方式之一，由于使用基类对象的地方都可以使 用子类对象，因此<strong>在程序中尽量使用基类类型来对对象进行定义，而在运行时再确 定其子类类型，用子类对象来替换父类对象。</strong></p> <p><strong>在使用里氏代换原则时需要注意如下几个问题:</strong></p> <ul><li>(1)子类的所有方法必须在父类中声明，或子类必须实现父类中声明的所有方法。 根据里氏代换原则，为了保证系统的扩展性，在程序中通常使用父类来进行定 义，如果一个方法只存在子类中，在父类中不提供相应的声明，则无法在以父类 定义的对象中使用该方法。</li> <li>(2) 我们在运用里氏代换原则时，尽量把父类设计为抽象类或者接口，让子类继 承父类或实现父接口，并实现在父类中声明的方法，运行时，子类实例替换父类 实例，我们可以很方便地扩展系统的功能，同时无须修改原有子类的代码，增加 新的功能可以通过增加一个新的子类来实现。里氏代换原则是开闭原则的具体实 现手段之一。</li> <li>(3) Java语言中，在编译阶段，Java编译器会检查一个程序是否符合里氏代换原 则，这是一个与实现无关的、纯语法意义上的检查，但Java编译器的检查是有局 限的。</li></ul> <p>示例:
+在Sunny软件公司开发的CRM系统中，客户(Customer)可以分为VIP客户 (VIPCustomer)和普通客户(CommonCustomer)两类，系统需要提供一个发送Email 的功能，原始设计方案如图1所示:</p> <p><img src="/assets/img/pr5.5d06e806.png" alt="alt 5">
+图5原始结构图</p> <p>在对系统进行进一步分析后发现，无论是普通客户还是VIP客户，发送邮件的过程都 是相同的，也就是说两个send()方法中的代码重复，而且在本系统中还将增加新类型 的客户。</p> <p><strong>为了让系统具有更好的扩展性，同时减少代码重复，使用里氏代换原则对其进行重构。</strong></p> <p>在本实例中，可以考虑增加一个新的抽象客户类Customer，而将 CommonCustomer和VIPCustomer类作为其子类，邮件发送类EmailSender类针对 抽象客户类Customer编程，根据里氏代换原则，能够接受基类对象的地方必然能够 接受子类对象，因此将EmailSender中的send()方法的参数类型改为Customer，如果 需要增加新类型的客户，只需将其作为Customer类的子类即可。重构后的结构如图 2所示:</p> <p><img src="/assets/img/pr6.8e58f187.png" alt="alt 6"></p> <p>图2 重构后的结构图</p> <p><strong>里氏代换原则是实现开闭原则的重要方式之一。</strong> 在本实例中，在传递参数时使用基类对象，除此以外，在定义成员变量、定义局部变量、确定方法返回类型时都可使 用里氏代换原则。针对基类编程，在程序运行时再确定具体子类。</p> <h2 id="依赖倒转原则"><a href="#依赖倒转原则" class="header-anchor">#</a> 依赖倒转原则</h2> <p>如果说开闭原则是面向对象设计的目标的话，那么依赖倒转原则就是面向对象设计 的主要实现机制之一，它是系统抽象化的具体实现。依赖倒转原则是Robert C. Martin在1996年为“C++Reporter”所写的专栏Engineering Notebook的第三篇，后 来加入到他在2002年出版的经典著作“Agile Software Development, Principles, Patterns, and Practices”一书中。依赖倒转原则定义如下:</p> <p><code>1 | 依赖倒转原则(Dependency Inversion Principle, DIP):抽象不应该依赖于细节，细节应当依 赖于抽象。换言之，要针对接口编程，而不是针对实现编程。</code></p> <p>依赖倒转原则要求我们在程序代码中传递参数时或在关联关系中，尽量引用层次高的抽象层类，即使用接口和抽象类进行变量类型声明、参数类型声明、方法返回类型声明，以及数据类型的转换等，而不要用具体类来做这些事情。为了确保该原则的应用，一个具体类应当只实现接口或抽象类中声明过的方法，而不要给出多余的方法，否则将无法调用到在子类中增加的新方法。</p> <p>在引入抽象层后，系统将具有很好的灵活性，在程序中尽量使用抽象层进行编程，而将具体类写在配置文件中，这样一来，如果系统行为发生变化，只需要对抽象层进行扩展，并修改配置文件，而无须修改原有系统的源代码，在不修改的情况下来扩展系统的功能，满足开闭原则的要求。</p> <p>在实现依赖倒转原则时，我们需要针对抽象层编程，而将具体类的对象通过依赖注入 <strong>(DependencyInjection, DI)</strong> 的方式注入到其他对象中，<strong>依赖注入是指当一个对象要与其他对象发生依赖关系时，通过抽象来注入所依赖的对象。</strong> 常用的注入方式有 三种，分别是:<strong>构造注入，设值注入(Setter注入)和接口注入</strong>。构造注入是指通过构造函数来传入具体类的对象，设值注入是指通过Setter方法来传入具体类的对象，而接口注入是指通过在接口中声明的业务方法来传入具体类的对象。这些方法在定义时使用的是抽象类型，在运行时再传入具体类型的对象，由子类对象来覆盖父类对象。</p> <p>下面通过一个简单实例来加深对依赖倒转原则的理解:</p> <p>Sunny软件公司开发人员在开发某CRM系统时发现:该系统经常需要将存储在TXT或Excel文件中的客户信息转存到数据库中，因此需要进行数据格式转换。在客户数据操作类中将调用数据格式转换类的方法实现格式转换和数据库插入操作，初始设计方案结构如图1所示:</p> <p><img src="/assets/img/pr7.593a7237.png" alt="alt 7">
+图1初始设计方案结构图</p> <p>在编码实现图1所示结构时，Sunny软件公司开发人员发现该设计方案存在一个非常严重的问题，由于每次转换数据时数据来源不一定相同，因此需要更换数据转换类，如有时候需要将TXTDataConvertor改为ExcelDataConvertor，此时，需要修改CustomerDAO的源代码，而且在引入并使用新的数据转换类时也不得不修改CustomerDAO的源代码，系统扩展性较差，违反了开闭原则，现需要对该方案进行重构。</p> <p>在本实例中，由于CustomerDAO针对具体数据转换类编程，因此在增加新的数据转换类或者更换数据转换类时都不得不修改CustomerDAO的源代码。我们可以通过引入抽象数据转换类解决该问题，在引入抽象数据转换类DataConvertor之后，CustomerDAO针对抽象类DataConvertor编程，而将具体数据转换类名存储在配置文件中，符合依赖倒转原则。根据里氏代换原则，程序运行时，具体数据转换类对象将替换DataConvertor类型的对象，程序不会出现任何问题。更换具体数据转换类时无须修改源代码，只需要修改配置文件;如果需要增加新的具体数据转换类，只要将新增数据转换类作为DataConvertor的子类并修改配置文件即可，原有代码无须做任何修改，满足开闭原则。重构后的结构如图2所示:</p> <p><img src="/assets/img/pr8.682f4522.png" alt="alt 8">
+图2重构后的结构图</p> <p>在上述重构过程中，我们使用了开闭原则、里氏代换原则和依赖倒转原则，在大多数情况下，这三个设计原则会同时出现，开闭原则是目标，里氏代换原则是基础，依赖倒转原则是手段，它们相辅相成，相互补充，目标一致，只是分析问题时所站角度不同而已。</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-70334359></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.e36a6f16.js" defer></script><script src="/assets/js/3.c46e8d0c.js" defer></script><script src="/assets/js/1.ae8c2f5c.js" defer></script><script src="/assets/js/9.23656f5d.js" defer></script>
+  </body>
+</html>

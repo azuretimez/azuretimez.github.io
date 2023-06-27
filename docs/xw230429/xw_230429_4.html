@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>4 前端模块化 | 路漫漫其修远兮，吾将上下而求索</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="个人展示网站">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.a5fc1f3a.css" as="style"><link rel="preload" href="/assets/js/app.e36a6f16.js" as="script"><link rel="preload" href="/assets/js/3.c46e8d0c.js" as="script"><link rel="preload" href="/assets/js/1.ae8c2f5c.js" as="script"><link rel="preload" href="/assets/js/179.39575261.js" as="script"><link rel="prefetch" href="/assets/js/10.1cf64c3d.js"><link rel="prefetch" href="/assets/js/100.8e0cb6e9.js"><link rel="prefetch" href="/assets/js/101.50c061c6.js"><link rel="prefetch" href="/assets/js/102.2057e243.js"><link rel="prefetch" href="/assets/js/103.e1af4b24.js"><link rel="prefetch" href="/assets/js/104.3273f8c1.js"><link rel="prefetch" href="/assets/js/105.ec308f95.js"><link rel="prefetch" href="/assets/js/106.b201fdca.js"><link rel="prefetch" href="/assets/js/107.31e56d88.js"><link rel="prefetch" href="/assets/js/108.b8e686e6.js"><link rel="prefetch" href="/assets/js/109.11662bc0.js"><link rel="prefetch" href="/assets/js/11.d89e231c.js"><link rel="prefetch" href="/assets/js/110.b87ce165.js"><link rel="prefetch" href="/assets/js/111.bccde66d.js"><link rel="prefetch" href="/assets/js/112.ff02760d.js"><link rel="prefetch" href="/assets/js/113.90a25d0e.js"><link rel="prefetch" href="/assets/js/114.dfd96931.js"><link rel="prefetch" href="/assets/js/115.e30e94bb.js"><link rel="prefetch" href="/assets/js/116.aea17da1.js"><link rel="prefetch" href="/assets/js/117.f2e5c499.js"><link rel="prefetch" href="/assets/js/118.4ded9ace.js"><link rel="prefetch" href="/assets/js/119.24b0e5fe.js"><link rel="prefetch" href="/assets/js/12.a929a20b.js"><link rel="prefetch" href="/assets/js/120.efc30fc4.js"><link rel="prefetch" href="/assets/js/121.9d07a307.js"><link rel="prefetch" href="/assets/js/122.4ec90e5c.js"><link rel="prefetch" href="/assets/js/123.40937fbf.js"><link rel="prefetch" href="/assets/js/124.e1f314f1.js"><link rel="prefetch" href="/assets/js/125.05bd4ef7.js"><link rel="prefetch" href="/assets/js/126.d4a7faf6.js"><link rel="prefetch" href="/assets/js/127.d2128e03.js"><link rel="prefetch" href="/assets/js/128.a05d604e.js"><link rel="prefetch" href="/assets/js/129.6105945f.js"><link rel="prefetch" href="/assets/js/13.360853c7.js"><link rel="prefetch" href="/assets/js/130.9b8daf1c.js"><link rel="prefetch" href="/assets/js/131.cecfa697.js"><link rel="prefetch" href="/assets/js/132.c95442e6.js"><link rel="prefetch" href="/assets/js/133.539ab718.js"><link rel="prefetch" href="/assets/js/134.cdfce489.js"><link rel="prefetch" href="/assets/js/135.c123dac0.js"><link rel="prefetch" href="/assets/js/136.985a226d.js"><link rel="prefetch" href="/assets/js/137.0aee31b8.js"><link rel="prefetch" href="/assets/js/138.d2509857.js"><link rel="prefetch" href="/assets/js/139.a96a3668.js"><link rel="prefetch" href="/assets/js/14.c195e003.js"><link rel="prefetch" href="/assets/js/140.e19a3e11.js"><link rel="prefetch" href="/assets/js/141.fdc0c06c.js"><link rel="prefetch" href="/assets/js/142.2cd6f75b.js"><link rel="prefetch" href="/assets/js/143.609899b6.js"><link rel="prefetch" href="/assets/js/144.ff242386.js"><link rel="prefetch" href="/assets/js/145.b2b79665.js"><link rel="prefetch" href="/assets/js/146.039accd2.js"><link rel="prefetch" href="/assets/js/147.95319884.js"><link rel="prefetch" href="/assets/js/148.6c1f3479.js"><link rel="prefetch" href="/assets/js/149.eb07bb5f.js"><link rel="prefetch" href="/assets/js/15.549a8f95.js"><link rel="prefetch" href="/assets/js/150.84a65913.js"><link rel="prefetch" href="/assets/js/151.915c8722.js"><link rel="prefetch" href="/assets/js/152.0d23ca3e.js"><link rel="prefetch" href="/assets/js/153.4b006757.js"><link rel="prefetch" href="/assets/js/154.e8667872.js"><link rel="prefetch" href="/assets/js/155.1d66b3f4.js"><link rel="prefetch" href="/assets/js/156.39e659e5.js"><link rel="prefetch" href="/assets/js/157.f281e5ad.js"><link rel="prefetch" href="/assets/js/158.aa34863e.js"><link rel="prefetch" href="/assets/js/159.a640b562.js"><link rel="prefetch" href="/assets/js/16.a4a3b75b.js"><link rel="prefetch" href="/assets/js/160.c14ccadf.js"><link rel="prefetch" href="/assets/js/161.49444813.js"><link rel="prefetch" href="/assets/js/162.d4361af0.js"><link rel="prefetch" href="/assets/js/163.7789f841.js"><link rel="prefetch" href="/assets/js/164.536683be.js"><link rel="prefetch" href="/assets/js/165.e82e5352.js"><link rel="prefetch" href="/assets/js/166.08275b02.js"><link rel="prefetch" href="/assets/js/167.b8b0b20f.js"><link rel="prefetch" href="/assets/js/168.4bc37c3e.js"><link rel="prefetch" href="/assets/js/169.a901cacb.js"><link rel="prefetch" href="/assets/js/17.d0e1d5b9.js"><link rel="prefetch" href="/assets/js/170.4e6b026d.js"><link rel="prefetch" href="/assets/js/171.0d84b945.js"><link rel="prefetch" href="/assets/js/172.00e188a4.js"><link rel="prefetch" href="/assets/js/173.a79d19f4.js"><link rel="prefetch" href="/assets/js/174.5ac8a473.js"><link rel="prefetch" href="/assets/js/175.9d051d34.js"><link rel="prefetch" href="/assets/js/176.e001aacf.js"><link rel="prefetch" href="/assets/js/177.64e39367.js"><link rel="prefetch" href="/assets/js/178.31e998c6.js"><link rel="prefetch" href="/assets/js/18.6ff5524b.js"><link rel="prefetch" href="/assets/js/180.6a9ec275.js"><link rel="prefetch" href="/assets/js/19.066f4710.js"><link rel="prefetch" href="/assets/js/20.47c6945e.js"><link rel="prefetch" href="/assets/js/21.80d08d1a.js"><link rel="prefetch" href="/assets/js/22.0bf68511.js"><link rel="prefetch" href="/assets/js/23.cbd2da20.js"><link rel="prefetch" href="/assets/js/24.39334856.js"><link rel="prefetch" href="/assets/js/25.d2dc6939.js"><link rel="prefetch" href="/assets/js/26.b22f2659.js"><link rel="prefetch" href="/assets/js/27.fafb5d89.js"><link rel="prefetch" href="/assets/js/28.cc4e2dfa.js"><link rel="prefetch" href="/assets/js/29.051e1294.js"><link rel="prefetch" href="/assets/js/30.a43fa163.js"><link rel="prefetch" href="/assets/js/31.6687eda9.js"><link rel="prefetch" href="/assets/js/32.a11764ff.js"><link rel="prefetch" href="/assets/js/33.e3fb0fca.js"><link rel="prefetch" href="/assets/js/34.3a0b017f.js"><link rel="prefetch" href="/assets/js/35.0aa88a05.js"><link rel="prefetch" href="/assets/js/36.72771fbc.js"><link rel="prefetch" href="/assets/js/37.f82581be.js"><link rel="prefetch" href="/assets/js/38.16685a22.js"><link rel="prefetch" href="/assets/js/39.1f26208b.js"><link rel="prefetch" href="/assets/js/4.b776f0a5.js"><link rel="prefetch" href="/assets/js/40.46ab7f6b.js"><link rel="prefetch" href="/assets/js/41.7cb6f967.js"><link rel="prefetch" href="/assets/js/42.d7cd36c2.js"><link rel="prefetch" href="/assets/js/43.1e7c4d50.js"><link rel="prefetch" href="/assets/js/44.84217364.js"><link rel="prefetch" href="/assets/js/45.03dd1cc7.js"><link rel="prefetch" href="/assets/js/46.0b2d4aeb.js"><link rel="prefetch" href="/assets/js/47.59165cbe.js"><link rel="prefetch" href="/assets/js/48.fccb4afc.js"><link rel="prefetch" href="/assets/js/49.4b2640e3.js"><link rel="prefetch" href="/assets/js/5.4c2909d0.js"><link rel="prefetch" href="/assets/js/50.398ab329.js"><link rel="prefetch" href="/assets/js/51.e7ed2c25.js"><link rel="prefetch" href="/assets/js/52.490cf252.js"><link rel="prefetch" href="/assets/js/53.2fe8f7b5.js"><link rel="prefetch" href="/assets/js/54.a93e7e56.js"><link rel="prefetch" href="/assets/js/55.dc954fde.js"><link rel="prefetch" href="/assets/js/56.f5b55acc.js"><link rel="prefetch" href="/assets/js/57.7cd4dc0e.js"><link rel="prefetch" href="/assets/js/58.0ad5311b.js"><link rel="prefetch" href="/assets/js/59.1f4fee35.js"><link rel="prefetch" href="/assets/js/6.bbb54abe.js"><link rel="prefetch" href="/assets/js/60.71759f96.js"><link rel="prefetch" href="/assets/js/61.f4326786.js"><link rel="prefetch" href="/assets/js/62.3e089928.js"><link rel="prefetch" href="/assets/js/63.5f9c9020.js"><link rel="prefetch" href="/assets/js/64.8e972ad5.js"><link rel="prefetch" href="/assets/js/65.f9baf78c.js"><link rel="prefetch" href="/assets/js/66.6e6e1936.js"><link rel="prefetch" href="/assets/js/67.2d59a9ab.js"><link rel="prefetch" href="/assets/js/68.ffe32a4d.js"><link rel="prefetch" href="/assets/js/69.1cfc3fa9.js"><link rel="prefetch" href="/assets/js/7.761dcbd9.js"><link rel="prefetch" href="/assets/js/70.71000823.js"><link rel="prefetch" href="/assets/js/71.ba2bce19.js"><link rel="prefetch" href="/assets/js/72.3281b629.js"><link rel="prefetch" href="/assets/js/73.8e18302a.js"><link rel="prefetch" href="/assets/js/74.0ed4c579.js"><link rel="prefetch" href="/assets/js/75.4f3a1dd2.js"><link rel="prefetch" href="/assets/js/76.0d5688c9.js"><link rel="prefetch" href="/assets/js/77.b5a95948.js"><link rel="prefetch" href="/assets/js/78.cee29896.js"><link rel="prefetch" href="/assets/js/79.7364cccd.js"><link rel="prefetch" href="/assets/js/8.0b37599a.js"><link rel="prefetch" href="/assets/js/80.b3e7e887.js"><link rel="prefetch" href="/assets/js/81.845dc522.js"><link rel="prefetch" href="/assets/js/82.af5b833c.js"><link rel="prefetch" href="/assets/js/83.97404d49.js"><link rel="prefetch" href="/assets/js/84.0e15de87.js"><link rel="prefetch" href="/assets/js/85.4c7f8a2a.js"><link rel="prefetch" href="/assets/js/86.663f8f72.js"><link rel="prefetch" href="/assets/js/87.7e263a3b.js"><link rel="prefetch" href="/assets/js/88.9bde7046.js"><link rel="prefetch" href="/assets/js/89.b97ce8be.js"><link rel="prefetch" href="/assets/js/9.23656f5d.js"><link rel="prefetch" href="/assets/js/90.24ebf178.js"><link rel="prefetch" href="/assets/js/91.839071ab.js"><link rel="prefetch" href="/assets/js/92.b08db120.js"><link rel="prefetch" href="/assets/js/93.9cd39f03.js"><link rel="prefetch" href="/assets/js/94.dbe2b77e.js"><link rel="prefetch" href="/assets/js/95.2de8699b.js"><link rel="prefetch" href="/assets/js/96.7c2e0f96.js"><link rel="prefetch" href="/assets/js/97.6d8d45a0.js"><link rel="prefetch" href="/assets/js/98.df826acd.js"><link rel="prefetch" href="/assets/js/99.f6994c7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a5fc1f3a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>路漫漫其修远兮，吾将上下而求索</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>一个人可以走的很快，一群人可以走的更远</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>AzureTimez</span>
+            
+          <span data-v-4e82dffc>2013 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpeg" alt="路漫漫其修远兮，吾将上下而求索" class="logo"> <span class="site-name">路漫漫其修远兮，吾将上下而求索</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/qiankun/" class="nav-link"><i class="undefined"></i>
+  qiankun
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react,antd/" class="nav-link"><i class="undefined"></i>
+  react,antd
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Rollup/" class="nav-link"><i class="undefined"></i>
+  Rollup
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue2/" class="nav-link"><i class="undefined"></i>
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue3/" class="nav-link"><i class="undefined"></i>
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JS/" class="nav-link"><i class="undefined"></i>
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Low Code/" class="nav-link"><i class="undefined"></i>
+  Low Code
+</a></li><li class="dropdown-item"><!----> <a href="/categories/性能/" class="nav-link"><i class="undefined"></i>
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/categories/微前端/" class="nav-link"><i class="undefined"></i>
+  微前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可视化/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TS/" class="nav-link"><i class="undefined"></i>
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ES6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ssr/" class="nav-link"><i class="undefined"></i>
+  ssr
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/weapp/" class="nav-link"><i class="undefined"></i>
+  weapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hybrid/" class="nav-link"><i class="undefined"></i>
+  hybrid
+</a></li><li class="dropdown-item"><!----> <a href="/categories/flutter/" class="nav-link"><i class="undefined"></i>
+  flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/electron/" class="nav-link"><i class="undefined"></i>
+  electron
+</a></li><li class="dropdown-item"><!----> <a href="/categories/AST/" class="nav-link"><i class="undefined"></i>
+  AST
+</a></li><li class="dropdown-item"><!----> <a href="/categories/模块化/" class="nav-link"><i class="undefined"></i>
+  模块化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vite/" class="nav-link"><i class="undefined"></i>
+  vite
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器/" class="nav-link"><i class="undefined"></i>
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/categories/gulp/" class="nav-link"><i class="undefined"></i>
+  gulp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/canvas/" class="nav-link"><i class="undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webGL/" class="nav-link"><i class="undefined"></i>
+  webGL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ajax/" class="nav-link"><i class="undefined"></i>
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/categories/fetch/" class="nav-link"><i class="undefined"></i>
+  fetch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GC/" class="nav-link"><i class="undefined"></i>
+  GC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/avatar.jpeg" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    AzureTimez
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>170</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>44</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/qiankun/" class="nav-link"><i class="undefined"></i>
+  qiankun
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react,antd/" class="nav-link"><i class="undefined"></i>
+  react,antd
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Rollup/" class="nav-link"><i class="undefined"></i>
+  Rollup
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue2/" class="nav-link"><i class="undefined"></i>
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue3/" class="nav-link"><i class="undefined"></i>
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JS/" class="nav-link"><i class="undefined"></i>
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Low Code/" class="nav-link"><i class="undefined"></i>
+  Low Code
+</a></li><li class="dropdown-item"><!----> <a href="/categories/性能/" class="nav-link"><i class="undefined"></i>
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/categories/微前端/" class="nav-link"><i class="undefined"></i>
+  微前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可视化/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TS/" class="nav-link"><i class="undefined"></i>
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ES6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ssr/" class="nav-link"><i class="undefined"></i>
+  ssr
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/weapp/" class="nav-link"><i class="undefined"></i>
+  weapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hybrid/" class="nav-link"><i class="undefined"></i>
+  hybrid
+</a></li><li class="dropdown-item"><!----> <a href="/categories/flutter/" class="nav-link"><i class="undefined"></i>
+  flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/electron/" class="nav-link"><i class="undefined"></i>
+  electron
+</a></li><li class="dropdown-item"><!----> <a href="/categories/AST/" class="nav-link"><i class="undefined"></i>
+  AST
+</a></li><li class="dropdown-item"><!----> <a href="/categories/模块化/" class="nav-link"><i class="undefined"></i>
+  模块化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vite/" class="nav-link"><i class="undefined"></i>
+  vite
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器/" class="nav-link"><i class="undefined"></i>
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/categories/gulp/" class="nav-link"><i class="undefined"></i>
+  gulp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/canvas/" class="nav-link"><i class="undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webGL/" class="nav-link"><i class="undefined"></i>
+  webGL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ajax/" class="nav-link"><i class="undefined"></i>
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/categories/fetch/" class="nav-link"><i class="undefined"></i>
+  fetch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GC/" class="nav-link"><i class="undefined"></i>
+  GC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/docs/xw230429/" aria-current="page" class="sidebar-link">前端体系</a></li><li><a href="/docs/xw230429/xw_230429_1.html" class="sidebar-link">1. JavaScript高级用法(1)</a></li><li><a href="/docs/xw230429/xw_230429_2.html" class="sidebar-link">2 JavaScript高级用法(2)</a></li><li><a href="/docs/xw230429/xw_230429_3.html" class="sidebar-link">3 前端异步处理规范及应用</a></li><li><a href="/docs/xw230429/xw_230429_4.html" aria-current="page" class="active sidebar-link">4 前端模块化</a></li><li><a href="/docs/xw230429/xw_230429_5.html" class="sidebar-link">5. 浏览器事件模型&amp;请求</a></li><li><a href="/docs/xw230429/xw_230429_6.html" class="sidebar-link">6. JavaScript的垃圾回收和内存泄漏</a></li><li><a href="/docs/xw230429/xw_230429_7.html" class="sidebar-link">7. JavaScript的运行机制</a></li><li><a href="/docs/xw230429/xw_230429_8.html" class="sidebar-link">8. 函数式编程</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>4 前端模块化</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>AzureTimez</span>
+            
+          <span data-v-4e82dffc>2013 - </span>
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">4 前端模块化</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>AzureTimez</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2023/6/24</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>JS</span><span class="tag-item" data-v-1ff7123e>IIFE</span><span class="tag-item" data-v-1ff7123e>CommonJS</span><span class="tag-item" data-v-1ff7123e>AMD</span><span class="tag-item" data-v-1ff7123e>CMD</span><span class="tag-item" data-v-1ff7123e>ES6</span><span class="tag-item" data-v-1ff7123e>UMD</span></i></div></div> <div class="theme-reco-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#模块化的理解">模块化的理解</a><ul><li><a href="#什么是模块">什么是模块?</a></li><li><a href="#模块化的进化过程">模块化的进化过程</a></li><li><a href="#模块化的好处">模块化的好处</a></li><li><a href="#引入多个script后出现出现问题">引入多个script后出现出现问题</a></li></ul></li><li><a href="#模块化规范">模块化规范</a><ul><li><a href="#commonjs">CommonJS</a></li><li><a href="#amd-asynchronous-module-definition">AMD（Asynchronous Module Definition）</a></li><li><a href="#cmd-common-module-definition">CMD（Common Module Definition）</a></li><li><a href="#es6模块化">ES6模块化</a></li><li><a href="#umd-universal-module-definition">UMD（Universal Module Definition）</a></li></ul></li><li><a href="#总结">总结</a></li></ul></div><p></p> <h2 id="模块化的理解"><a href="#模块化的理解" class="header-anchor">#</a> 模块化的理解</h2> <p>在JavaScript发展初期就是为了实现简单的页面交互逻辑，而如今CPU、浏览器性能得到了极大的提升，很多页面逻辑迁移到了客户端（表单验证等），随着web2.0时代的到来，Ajax技术得到广泛应用，jQuery等前端库层出不穷，前端代码日益膨胀，此时在JS方面就会考虑使用模块化规范去管理。模块化已经发展了有十余年了，不同的工具和轮子层出不穷，但总结起来，它们解决的问题主要有三个：</p> <ol><li>外部模块的管理；</li> <li>内部模块的组织；</li> <li>模块源码到目标代码的编译和转换；</li></ol> <p>以下为各个工具或者框架的诞生时间，先了解下时间节奏，方便对内容有所了解：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> 生态             诞生时间
+ Node.js          2009年   
+ NPM              2010年   
+ requireJS(AMD)   2010年
+ seaJS(CMD)       2011年
+ broswerify       2011年
+ webpack          2012年
+ grunt            2012年 
+ gulp             2013年
+ react            2013年 
+ vue              2014年
+ angular          2016年
+ redux            2015年 
+ vite             2020年
+ snowpack         2020年 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h3 id="什么是模块"><a href="#什么是模块" class="header-anchor">#</a> 什么是模块?</h3> <ul><li>将一个复杂的程序依据一定的规则(规范)封装成几个块(文件)，并进行组合在一起；</li> <li>块的内部数据与实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信；</li></ul> <h3 id="模块化的进化过程"><a href="#模块化的进化过程" class="header-anchor">#</a> 模块化的进化过程</h3> <h4 id="全局function模式"><a href="#全局function模式" class="header-anchor">#</a> 全局function模式</h4> <p>将不同的功能封装成不同的全局函数</p> <ul><li>编码：将不同的功能封装成不同的全局函数</li> <li>问题：污染全局命名空间, 容易引起命名冲突或数据不安全，而且模块成员之间看不出直接关系
+​</li></ul> <h4 id="namespace模式"><a href="#namespace模式" class="header-anchor">#</a> namespace模式</h4> <p>简单对象封装</p> <ul><li>作用：减少了全局变量，解决命名冲突</li> <li>问题：数据不安全(外部可以直接修改模块内部的数据)</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> myModule <span class="token operator">=</span> <span class="token punctuation">{</span>
+  data<span class="token operator">:</span> <span class="token string">'www.baidu.com'</span><span class="token punctuation">,</span>
+  <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">foo() </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">bar() </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+myModule<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token string">'other data'</span> <span class="token comment">//能直接修改模块内部的数据</span>
+myModule<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// foo() other data</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>这样的写法会暴露所有模块成员，内部状态可以被外部改写。</p> <h4 id="iife模式"><a href="#iife模式" class="header-anchor">#</a> IIFE模式</h4> <p>匿名函数自调用(闭包)</p> <ul><li>作用：数据是私有的, 外部只能通过暴露的方法操作</li> <li>编码：将数据和行为封装到一个函数内部, 通过给window添加属性来向外暴露接口</li> <li>问题：如果当前这个模块依赖另一个模块怎么办?</li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code>// index.html文件
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>module.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  myModule<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  myModule<span class="token punctuation">.</span><span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myModule<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token comment">//undefined 不能访问模块内部数据</span>
+  myModule<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token string">'xxxx'</span> <span class="token comment">//不是修改的模块内部的data</span>
+  myModule<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//没有改变</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// module.js文件</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">window</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token string">'www.xianzao.com'</span>
+  <span class="token comment">//操作数据的函数</span>
+  <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//用于暴露有函数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">foo() </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//用于暴露有函数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">bar() </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token function">otherFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//内部调用</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">otherFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//内部私有的函数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'otherFun()'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//暴露行为</span>
+  window<span class="token punctuation">.</span>myModule <span class="token operator">=</span> <span class="token punctuation">{</span> foo<span class="token punctuation">,</span> bar <span class="token punctuation">}</span> <span class="token comment">//ES6写法</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>最后得到的结果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>​foo() www.xianzao.com
+bar() www.xianzao.com
+otehrFun()
+undefined
+foo() www.xianzao.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="iife模式增强"><a href="#iife模式增强" class="header-anchor">#</a> IIFE模式增强</h4> <p>这就是现代模块实现的基石</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// module.js文件</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">window<span class="token punctuation">,</span> $</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token string">'www.baidu.com'</span>
+  <span class="token comment">//操作数据的函数</span>
+  <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//用于暴露有函数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">foo() </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background'</span><span class="token punctuation">,</span> <span class="token string">'red'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//用于暴露有函数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">bar() </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token function">otherFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//内部调用</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">otherFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//内部私有的函数</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'otherFun()'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//暴露行为</span>
+  window<span class="token punctuation">.</span>myModule <span class="token operator">=</span> <span class="token punctuation">{</span> foo<span class="token punctuation">,</span> bar <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> jQuery<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><div class="language-html line-numbers-mode"><pre class="language-html"><code> // index.html文件
+<span class="token comment">&lt;!-- 引入的js必须有一定顺序 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>jquery-1.10.1.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>module.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  myModule<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>​
+上例子通过jquery方法将页面的背景颜色改成红色，所以必须先引入jQuery库，就把这个库当作参数传入。这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显。</p> <h3 id="模块化的好处"><a href="#模块化的好处" class="header-anchor">#</a> 模块化的好处</h3> <ul><li>避免命名冲突(减少命名空间污染)；</li> <li>更好的分离, 按需加载；</li> <li>更高复用性；</li> <li>高可维护性；</li></ul> <h3 id="引入多个script后出现出现问题"><a href="#引入多个script后出现出现问题" class="header-anchor">#</a> 引入多个script后出现出现问题</h3> <ul><li>请求过多
+首先我们要依赖多个模块，那样就会发送多个请求，导致请求过多；</li> <li>依赖模糊
+我们不知道他们的具体依赖关系是什么，也就是说很容易因为不了解他们之间的依赖关系导致加载先后顺序出错；</li> <li>难以维护
+以上两种原因就导致了很难维护，很可能出现牵一发而动全身的情况导致项目出现严重的问题。<br>
+模块化固然有多个好处，然而一个页面需要引入多个js文件，就会出现以上这些问题。而这些问题可以通过模块化规范来解决，因此才有了后续的commonjs, AMD, ES6, CMD规范。</li></ul> <h2 id="模块化规范"><a href="#模块化规范" class="header-anchor">#</a> 模块化规范</h2> <h3 id="commonjs"><a href="#commonjs" class="header-anchor">#</a> CommonJS</h3> <h4 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h4> <p>Node 应用由模块组成，采用 CommonJS 模块规范。每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。在服务器端，模块的加载是运行时同步加载的；在浏览器端，模块需要提前编译打包处理。</p> <h4 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h4> <ul><li>所有代码都运行在模块作用域，不会污染全局作用域；</li> <li>模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存；</li> <li>模块加载的顺序，按照其在代码中出现的顺序；</li></ul> <h4 id="基本语法"><a href="#基本语法" class="header-anchor">#</a> 基本语法</h4> <ul><li>暴露模块：<code>module.exports = value</code>或<code>exports.xxx = value</code></li> <li>引入模块：<code>require(xxx)</code>,如果是第三方模块，xxx为模块名；如果是自定义模块，xxx为模块文件路径</li></ul> <p>此处我们有个疑问：CommonJS暴露的模块到底是什么? CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。
+​</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// example.js</span>
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">var</span> <span class="token function-variable function">addX</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> value <span class="token operator">+</span> x
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>x <span class="token operator">=</span> x
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>addX <span class="token operator">=</span> addX
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>上面代码通过module.exports输出变量x和函数addX。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> example <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./example.js'</span><span class="token punctuation">)</span><span class="token comment">//如果参数字符串以“./”开头，则表示加载的是一个位于相对路径</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>example<span class="token punctuation">.</span>x<span class="token punctuation">)</span> <span class="token comment">// 5</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>example<span class="token punctuation">.</span><span class="token function">addX</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 6</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>​
+require命令用于加载模块文件。require命令的基本功能是，读入并执行一个JavaScript文件，然后返回该模块的exports对象。如果没有发现指定模块，会报错。</p> <h4 id="模块的加载机制"><a href="#模块的加载机制" class="header-anchor">#</a> 模块的加载机制</h4> <p>CommonJS模块的加载机制是，输入的是被输出的值的拷贝。也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。这点与ES6模块化有重大差异（下文会介绍），请看下面这个例子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// lib.js</span>
+<span class="token keyword">var</span> counter <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token keyword">function</span> <span class="token function">incCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  counter<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  counter<span class="token operator">:</span> counter<span class="token punctuation">,</span>
+  incCounter<span class="token operator">:</span> incCounter<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>上面代码输出内部变量counter和改写这个变量的内部方法incCounter。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token keyword">var</span> counter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./lib'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>counter
+<span class="token keyword">var</span> incCounter <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./lib'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>incCounter
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span>  <span class="token comment">// 3</span>
+<span class="token function">incCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span> <span class="token comment">// 3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>​
+上面代码说明，counter输出以后，lib.js模块内部的变化就影响不到counter了。这是因为counter是一个原始类型的值，会被缓存。除非写成一个函数，才能得到内部变动后的值。</p> <h4 id="服务器端实现"><a href="#服务器端实现" class="header-anchor">#</a> 服务器端实现</h4> <ol><li>安装node</li> <li>npm init</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>|-modules
+  |-module1.js
+  |-module2.js
+  |-module3.js
+|-app.js
+|-package.json
+  {
+    &quot;name&quot;: &quot;commonJS-node&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ol start="3"><li>下载第三方模块</li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token function">uniq</span> --save // 用于数组去重
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​
+4. 定义模块代码</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//module1.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  msg<span class="token operator">:</span> <span class="token string">'module1'</span><span class="token punctuation">,</span>
+  <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//module2.js</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'module2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//module3.js</span>
+exports<span class="token punctuation">.</span><span class="token function-variable function">foo</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo() module3'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+exports<span class="token punctuation">.</span>arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// app.js文件</span>
+<span class="token comment">// 引入第三方库，应该放置在最前面</span>
+<span class="token keyword">let</span> uniq <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uniq'</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> module1 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./modules/module1'</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> module2 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./modules/module2'</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> module3 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./modules/module3'</span><span class="token punctuation">)</span>
+
+module1<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//module1</span>
+<span class="token function">module2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//module2</span>
+module3<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//foo() module3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">uniq</span><span class="token punctuation">(</span>module3<span class="token punctuation">.</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//[ 1, 2, 3 ]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>​
+5. node app.js</p> <h4 id="浏览器端实现"><a href="#浏览器端实现" class="header-anchor">#</a> 浏览器端实现</h4> <blockquote><p>使用Browserify：Browserify 会对代码进行解析，整理出代码中的所有模块依赖关系，然后把相关的模块代码都打包在一起，形成一个完整的JS文件，这个文件中不会存在 require 这类的模块化语法，变成可以在浏览器中运行的普通JS</p></blockquote> <ol><li>创建项目结构</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>|-js
+  |-dist //打包生成文件的目录
+  |-src //源码所在的目录
+    |-module1.js
+    |-module2.js
+    |-module3.js
+    |-app.js //应用主源文件
+|-index.html //运行于浏览器上
+|-package.json
+  {
+    &quot;name&quot;: &quot;browserify-test&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>​
+2. 下载browserify</p> <ul><li>全局: <code>npm install browserify -g</code></li> <li>局部: <code>npm install browserify --save-dev</code></li></ul> <ol start="3"><li><p>定义模块代码
+注意：index.html文件要运行在浏览器上，需要借助browserify将app.js文件打包编译，如果直接在index.html引入app.js就会报错！</p></li> <li><p>打包处理js根
+目录下运行</p></li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>browserify js/src/app.js -o js/dist/bundle.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​
+5. 页面使用引入
+在index.html文件中引入</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/dist/bundle.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​</p> <h3 id="amd-asynchronous-module-definition"><a href="#amd-asynchronous-module-definition" class="header-anchor">#</a> AMD（Asynchronous Module Definition）</h3> <h4 id="概念-2"><a href="#概念-2" class="header-anchor">#</a> 概念</h4> <p>CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数。由于Node.js主要用于服务器编程，模块文件一般都已经存在于本地硬盘，所以加载起来比较快，不用考虑非同步加载的方式，所以CommonJS规范比较适用。但是，如果是浏览器环境，要从服务器端加载模块，这时就必须采用非同步模式，因此浏览器端一般采用AMD规范。此外AMD规范比CommonJS规范在浏览器端实现要来着早。</p> <h4 id="基本语法-2"><a href="#基本语法-2" class="header-anchor">#</a> 基本语法</h4> <p>定义暴露模块：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//定义没有依赖的模块</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> 模块
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//定义有依赖的模块</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'module1'</span><span class="token punctuation">,</span> <span class="token string">'module2'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">m1<span class="token punctuation">,</span> m2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> 模块
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>​
+引入使用模块：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">require</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'module1'</span><span class="token punctuation">,</span> <span class="token string">'module2'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">m1<span class="token punctuation">,</span> m2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  使用m1<span class="token operator">/</span>m2
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>​
+4.2.3. AMD实现</p> <p>通过比较是否实用AMD，来说明使用AMD实际使用的效果。</p> <ul><li>未使用AMD规范</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// dataService.js文件</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">window</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> msg <span class="token operator">=</span> <span class="token string">'www.xianzao.com'</span>
+  <span class="token keyword">function</span> <span class="token function">getMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> msg<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  window<span class="token punctuation">.</span>dataService <span class="token operator">=</span> <span class="token punctuation">{</span>getMsg<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span>
+
+<span class="token comment">// alerter.js文件</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">window<span class="token punctuation">,</span> dataService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'xianzao'</span>
+  <span class="token keyword">function</span> <span class="token function">showMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>dataService<span class="token punctuation">.</span><span class="token function">getMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', '</span> <span class="token operator">+</span> name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  window<span class="token punctuation">.</span>alerter <span class="token operator">=</span> <span class="token punctuation">{</span>showMsg<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> dataService<span class="token punctuation">)</span>
+
+<span class="token comment">// main.js文件</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">alerter</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  alerter<span class="token punctuation">.</span><span class="token function">showMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>alerter<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><div class="language-html line-numbers-mode"><pre class="language-html"><code>// index.html文件
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Modular Demo 1: 未使用AMD(require.js)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/modules/dataService.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/modules/alerter.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/main.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>​
+最后得到如下结果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>'WWW.XIANZAO.COM', 'xianzao'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​
+这种方式缺点很明显：首先会发送多个请求，其次引入的js文件顺序不能搞错，否则会报错</p> <ul><li>使用require.js</li></ul> <p>RequireJS是一个工具库，主要用于客户端的模块管理。它的模块管理遵守AMD规范，RequireJS的基本思想是，通过define方法，将代码定义为模块；通过require方法，实现代码的模块加载。</p> <p>接下来介绍AMD规范在浏览器实现的步骤：</p> <ol><li>下载require.js, 并引入</li> <li>官网: http://www.requirejs.cn/</li> <li>github : https://github.com/requirejs/requirejs</li></ol> <p>然后将require.js导入项目: <code>js/libs/require.js</code></p> <ol start="2"><li>创建项目结构</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>|-js
+  |-libs
+    |-require.js
+  |-modules
+    |-alerter.js
+    |-dataService.js
+  |-main.js
+|-index.html
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>​
+3. 定义require.js的模块代码</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// dataService.js文件</span>
+<span class="token comment">// 定义没有依赖的模块</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> msg <span class="token operator">=</span> <span class="token string">'www.xianzao.com'</span>
+  <span class="token keyword">function</span> <span class="token function">getMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> msg<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> getMsg <span class="token punctuation">}</span> <span class="token comment">// 暴露模块</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//alerter.js文件</span>
+<span class="token comment">// 定义有依赖的模块</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'dataService'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">dataService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'xianzao'</span>
+  <span class="token keyword">function</span> <span class="token function">showMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>dataService<span class="token punctuation">.</span><span class="token function">getMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', '</span> <span class="token operator">+</span> name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 暴露模块</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> showMsg <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// main.js文件</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  require<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    baseUrl<span class="token operator">:</span> <span class="token string">'js/'</span><span class="token punctuation">,</span> <span class="token comment">//基本路径 出发点在根目录下</span>
+    paths<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">//映射: 模块标识名: 路径</span>
+      alerter<span class="token operator">:</span> <span class="token string">'./modules/alerter'</span><span class="token punctuation">,</span> <span class="token comment">//此处不能写成alerter.js,会报错</span>
+      dataService<span class="token operator">:</span> <span class="token string">'./modules/dataService'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'alerter'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">alerter</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    alerter<span class="token punctuation">.</span><span class="token function">showMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><div class="language-html line-numbers-mode"><pre class="language-html"><code>// index.html文件
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Modular Demo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 引入require.js并指定js主文件的入口 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">data-main</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/main<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/libs/require.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>​
+4. 页面引入require.js模块</p> <p>在index.html引入</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">data-main</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/main<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/libs/require.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​
+5. 引入第三方库</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// alerter.js文件</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'dataService'</span><span class="token punctuation">,</span> <span class="token string">'jquery'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">dataService<span class="token punctuation">,</span> $</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Tom'</span>
+  <span class="token keyword">function</span> <span class="token function">showMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>dataService<span class="token punctuation">.</span><span class="token function">getMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', '</span> <span class="token operator">+</span> name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">)</span>
+  <span class="token comment">// 暴露模块</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> showMsg <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>​</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// main.js文件</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  require<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    baseUrl<span class="token operator">:</span> <span class="token string">'js/'</span><span class="token punctuation">,</span> <span class="token comment">//基本路径 出发点在根目录下</span>
+    paths<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">//自定义模块</span>
+      alerter<span class="token operator">:</span> <span class="token string">'./modules/alerter'</span><span class="token punctuation">,</span> <span class="token comment">//此处不能写成alerter.js,会报错</span>
+      dataService<span class="token operator">:</span> <span class="token string">'./modules/dataService'</span><span class="token punctuation">,</span>
+      <span class="token comment">// 第三方库模块</span>
+      jquery<span class="token operator">:</span> <span class="token string">'./libs/jquery-1.10.1'</span> <span class="token comment">//注意：写成jQuery会报错</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'alerter'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">alerter</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    alerter<span class="token punctuation">.</span><span class="token function">showMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>​
+上例是在alerter.js文件中引入jQuery第三方库，main.js文件也要有相应的路径配置。</p> <ul><li>总结
+通过两者的比较，可以得出AMD模块定义的方法非常清晰，不会污染全局环境，能够清楚地显示依赖关系。AMD模式可以用于浏览器环境，并且允许非同步加载模块，也可以根据需要动态加载模块。</li></ul> <h3 id="cmd-common-module-definition"><a href="#cmd-common-module-definition" class="header-anchor">#</a> CMD（Common Module Definition）</h3> <h4 id="概念-3"><a href="#概念-3" class="header-anchor">#</a> 概念</h4> <p>CMD规范专门用于浏览器端，模块的加载是异步的，模块使用时才会加载执行。CMD规范整合了CommonJS和AMD规范的特点。在 Sea.js 中，所有 JavaScript 模块都遵循 CMD模块定义规范。</p> <h5 id="基本语法-3"><a href="#基本语法-3" class="header-anchor">#</a> 基本语法</h5> <p>​</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>​<span class="token comment">//定义没有依赖的模块</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  exports<span class="token punctuation">.</span>xxx <span class="token operator">=</span> value
+  module<span class="token punctuation">.</span>exports <span class="token operator">=</span> value
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//定义有依赖的模块</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//引入依赖模块(同步)</span>
+  <span class="token keyword">var</span> module2 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./module2'</span><span class="token punctuation">)</span>
+  <span class="token comment">//引入依赖模块(异步)</span>
+    require<span class="token punctuation">.</span><span class="token function">async</span><span class="token punctuation">(</span><span class="token string">'./module3'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">m3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token comment">//暴露模块</span>
+  exports<span class="token punctuation">.</span>xxx <span class="token operator">=</span> value
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 引入使用的模块</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">require</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> m1 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./module1'</span><span class="token punctuation">)</span>
+  <span class="token keyword">var</span> m4 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./module4'</span><span class="token punctuation">)</span>
+  m1<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  m4<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>​
+4.3.3. CMD实现下载</p> <ol><li>sea.js, 并引入</li></ol> <ul><li>官网: http://seajs.org/</li> <li>github : https://github.com/seajs/seajs</li></ul> <p>然后将sea.js导入项目：<code>js/libs/sea.js</code></p> <ol start="2"><li>创建项目结构</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>|-js
+  |-libs
+    |-sea.js
+  |-modules
+    |-module1.js
+    |-module2.js
+    |-module3.js
+    |-module4.js
+    |-main.js
+|-index.html
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>​
+3. 定义sea.js的模块代码</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// module1.js文件</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//内部变量数据</span>
+  <span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token string">'xianzao.com'</span>
+  <span class="token comment">//内部函数</span>
+  <span class="token keyword">function</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'module1 show() '</span> <span class="token operator">+</span> data<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//向外暴露</span>
+  exports<span class="token punctuation">.</span>show <span class="token operator">=</span> show
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// module2.js文件</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    msg<span class="token operator">:</span> <span class="token string">'I am xianzao'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// module3.js文件</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token constant">API_KEY</span> <span class="token operator">=</span> <span class="token string">'abc123'</span>
+  exports<span class="token punctuation">.</span><span class="token constant">API_KEY</span> <span class="token operator">=</span> <span class="token constant">API_KEY</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// module4.js文件</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//引入依赖模块(同步)</span>
+  <span class="token keyword">var</span> module2 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./module2'</span><span class="token punctuation">)</span>
+  <span class="token keyword">function</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'module4 show() '</span> <span class="token operator">+</span> module2<span class="token punctuation">.</span>msg<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  exports<span class="token punctuation">.</span>show <span class="token operator">=</span> show
+  <span class="token comment">//引入依赖模块(异步)</span>
+  require<span class="token punctuation">.</span><span class="token function">async</span><span class="token punctuation">(</span><span class="token string">'./module3'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">m3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'异步引入依赖模块3  '</span> <span class="token operator">+</span> m3<span class="token punctuation">.</span><span class="token constant">API_KEY</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// main.js文件</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">require</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> m1 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./module1'</span><span class="token punctuation">)</span>
+  <span class="token keyword">var</span> m4 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./module4'</span><span class="token punctuation">)</span>
+  m1<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  m4<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>​
+4. 在index.html中引入</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/libs/sea.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  seajs<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'./js/modules/main'</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>最后得到结果如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module1 show(), xianzao
+module4 show() I am xianzao
+异步引入依赖模块3 abc123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="amd与cmd区别"><a href="#amd与cmd区别" class="header-anchor">#</a> AMD与CMD区别</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// CMD</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">requie<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//依赖就近书写</span>
+  <span class="token keyword">var</span> module1 <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'Module1'</span><span class="token punctuation">)</span>
+  <span class="token keyword">var</span> result1 <span class="token operator">=</span> module1<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    result1<span class="token operator">:</span> result1<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// AMD</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Module1'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">module1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> result1 <span class="token operator">=</span> module1<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    result1<span class="token operator">:</span> result1<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>从上面的代码比较中我们可以得出AMD规范和CMD规范的区别</p> <ol><li>对依赖的处理：</li></ol> <ul><li>AMD推崇依赖前置，即通过依赖数组的方式提前声明当前模块的依赖；</li> <li>CMD推崇依赖就近，在编程需要用到的时候通过调用require方法动态引入；</li></ul> <ol start="2"><li>在本模块的对外输出：</li></ol> <ul><li>AMD推崇通过返回值的方式对外输出；</li> <li>CMD推崇通过给module.exports赋值的方式对外输出；</li></ul> <h3 id="es6模块化"><a href="#es6模块化" class="header-anchor">#</a> ES6模块化</h3> <h4 id="概念-4"><a href="#概念-4" class="header-anchor">#</a> 概念</h4> <p>ES6 模块的设计思想是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。<code>CommonJS</code>和<code>AMD</code>模块，都只能在运行时确定这些东西。比如，CommonJS 模块就是对象，输入时必须查找对象属性。</p> <h4 id="基本使用"><a href="#基本使用" class="header-anchor">#</a> 基本使用</h4> <p>export命令用于规定模块的对外接口，import命令用于输入其他模块提供的功能。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">/** 定义模块 math.js **/</span>
+<span class="token keyword">var</span> basicNum <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">var</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> basicNum<span class="token punctuation">,</span> add <span class="token punctuation">}</span>
+<span class="token comment">/** 引用模块 **/</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> basicNum<span class="token punctuation">,</span> add <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./math'</span>
+<span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token parameter">ele</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  ele<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">99</span> <span class="token operator">+</span> basicNum<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>​
+如上例所示，使用import命令的时候，用户需要知道所要加载的变量名或函数名，否则无法加载。为了给用户提供方便，让他们不用阅读文档就能加载模块，就要用到export default命令，为模块指定默认输出。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// export-default.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// import-default.js</span>
+<span class="token keyword">import</span> customName <span class="token keyword">from</span> <span class="token string">'./export-default'</span>
+<span class="token function">customName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 'foo'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>模块默认输出, 其他模块加载该模块时，import命令可以为该匿名函数指定任意名字。</p> <p>ES6 模块与 CommonJS 模块的差异</p> <ol><li>CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用；</li> <li>CommonJS 模块是运行时加载，ES6 模块是编译时输出接口；</li></ol> <p>第二个差异是因为 CommonJS 加载的是一个对象（即module.exports属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。</p> <p>下面重点解释第一个差异，我们还是举上面那个CommonJS模块的加载机制例子:</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// lib.js</span>
+<span class="token keyword">export</span> <span class="token keyword">let</span> counter <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">incCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  counter<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> counter<span class="token punctuation">,</span> incCounter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./lib'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span> <span class="token comment">// 3</span>
+<span class="token function">incCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span> <span class="token comment">// 4</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>​
+ES6 模块的运行机制与 CommonJS 不一样。ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块。</p> <h4 id="es6实现"><a href="#es6实现" class="header-anchor">#</a> ES6实现</h4> <p>简单来说就一句话：使用Babel将ES6编译为ES5代码，使用Browserify编译打包js。</p> <ol><li>定义package.json文件</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  &quot;name&quot; : &quot;es6-babel-browserify&quot;,
+  &quot;version&quot; : &quot;1.0.0&quot;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="2"><li>安装babel-cli, babel-preset-es2015和browserify</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install babel-cli browserify -g
+npm install babel-preset-es2015 --save-dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>​
+3. 定义.babelrc文件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  &quot;presets&quot;: [&quot;es2015&quot;]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>​
+4. 定义模块代码</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//module1.js文件</span>
+<span class="token comment">// 分别暴露</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo() module1'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'bar() module1'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//module2.js文件</span>
+<span class="token comment">// 统一暴露</span>
+<span class="token keyword">function</span> <span class="token function">fun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'fun1() module2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">fun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'fun2() module2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> fun1<span class="token punctuation">,</span> fun2 <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//module3.js文件</span>
+<span class="token comment">// 默认暴露 可以暴露任意数据类项，暴露什么数据，接收到就是什么数据</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'默认暴露'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// app.js文件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> foo<span class="token punctuation">,</span> bar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./module1'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> fun1<span class="token punctuation">,</span> fun2 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./module2'</span>
+<span class="token keyword">import</span> module3 <span class="token keyword">from</span> <span class="token string">'./module3'</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">fun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">fun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">module3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>​
+5. 编译并在index.html中引入</p> <ul><li>使用Babel将ES6编译为ES5代码(但包含CommonJS语法) :<code>babel js/src -d js/lib</code></li> <li>使用Browserify编译js : <code>browserify js/lib/app.js -o js/lib/bundle.js</code></li></ul> <p>然后在index.html文件中引入</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js/lib/bundle.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​
+最后得到如下结果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>foo() module1
+bar() module1
+fun1() module2
+fun2() module2
+默认暴露
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>​
+6. 引入第三方库
+首先安装依赖<code>npm install jquery@1</code>，然后在app.js文件中引入</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//app.js文件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> foo<span class="token punctuation">,</span> bar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./module1'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> fun1<span class="token punctuation">,</span> fun2 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./module2'</span>
+<span class="token keyword">import</span> module3 <span class="token keyword">from</span> <span class="token string">'./module3'</span>
+<span class="token keyword">import</span> $ <span class="token keyword">from</span> <span class="token string">'jquery'</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">fun1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">fun2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">module3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="umd-universal-module-definition"><a href="#umd-universal-module-definition" class="header-anchor">#</a> UMD（Universal Module Definition）</h3> <p>是一种javascript通用模块定义规范，让你的模块能在javascript所有运行环境中发挥作用。意味着要同时满足CommonJS, AMD, CMD的标准，以下为实现：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">root<span class="token punctuation">,</span> factory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> module <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> module<span class="token punctuation">.</span>exports <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'是commonjs模块规范，nodejs环境'</span><span class="token punctuation">)</span>
+    module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">factory</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> define <span class="token operator">===</span> <span class="token string">'function'</span> <span class="token operator">&amp;&amp;</span> define<span class="token punctuation">.</span>amd<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'是AMD模块规范，如require.js'</span><span class="token punctuation">)</span>
+    <span class="token function">define</span><span class="token punctuation">(</span>factory<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> define <span class="token operator">===</span> <span class="token string">'function'</span> <span class="token operator">&amp;&amp;</span> define<span class="token punctuation">.</span>cmd<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'是CMD模块规范，如sea.js'</span><span class="token punctuation">)</span>
+    <span class="token function">define</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">factory</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'没有模块环境，直接挂载在全局对象上'</span><span class="token punctuation">)</span>
+    root<span class="token punctuation">.</span>umdModule <span class="token operator">=</span> <span class="token function">factory</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'我是一个umd模块'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <ol><li>CommonJS规范主要用于服务端编程，加载模块是同步的，这并不适合在浏览器环境，因为同步意味着阻塞加载，浏览器资源是异步加载的，因此有了AMD CMD解决方案；</li> <li>AMD规范在浏览器环境中异步加载模块，而且可以并行加载多个模块。不过，AMD规范开发成本高，代码的阅读和书写比较困难，模块定义方式的语义不顺畅；</li> <li>CMD规范与AMD规范很相似，都用于浏览器编程，依赖就近，延迟执行，可以很容易在Node.js中运行；ES6 在语言标准的层面上，实现了模块功能，而且实现得相当简单，完全可以取代 CommonJS 和 AMD 规范，成为浏览器和服务器通用的模块解决方案；</li> <li>UMD为同时满足CommonJS, AMD, CMD标准的实现；</li></ol></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/docs/xw230429/xw_230429_3.html" class="prev">
+            3 前端异步处理规范及应用
+          </a></span> <span class="next"><a href="/docs/xw230429/xw_230429_5.html">
+            5. 浏览器事件模型&amp;请求
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-70334359></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.e36a6f16.js" defer></script><script src="/assets/js/3.c46e8d0c.js" defer></script><script src="/assets/js/1.ae8c2f5c.js" defer></script><script src="/assets/js/179.39575261.js" defer></script>
+  </body>
+</html>

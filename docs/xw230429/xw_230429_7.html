@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>7. JavaScript的运行机制 | 路漫漫其修远兮，吾将上下而求索</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="个人展示网站">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.a5fc1f3a.css" as="style"><link rel="preload" href="/assets/js/app.e36a6f16.js" as="script"><link rel="preload" href="/assets/js/3.c46e8d0c.js" as="script"><link rel="preload" href="/assets/js/1.ae8c2f5c.js" as="script"><link rel="preload" href="/assets/js/18.6ff5524b.js" as="script"><link rel="prefetch" href="/assets/js/10.1cf64c3d.js"><link rel="prefetch" href="/assets/js/100.8e0cb6e9.js"><link rel="prefetch" href="/assets/js/101.50c061c6.js"><link rel="prefetch" href="/assets/js/102.2057e243.js"><link rel="prefetch" href="/assets/js/103.e1af4b24.js"><link rel="prefetch" href="/assets/js/104.3273f8c1.js"><link rel="prefetch" href="/assets/js/105.ec308f95.js"><link rel="prefetch" href="/assets/js/106.b201fdca.js"><link rel="prefetch" href="/assets/js/107.31e56d88.js"><link rel="prefetch" href="/assets/js/108.b8e686e6.js"><link rel="prefetch" href="/assets/js/109.11662bc0.js"><link rel="prefetch" href="/assets/js/11.d89e231c.js"><link rel="prefetch" href="/assets/js/110.b87ce165.js"><link rel="prefetch" href="/assets/js/111.bccde66d.js"><link rel="prefetch" href="/assets/js/112.ff02760d.js"><link rel="prefetch" href="/assets/js/113.90a25d0e.js"><link rel="prefetch" href="/assets/js/114.dfd96931.js"><link rel="prefetch" href="/assets/js/115.e30e94bb.js"><link rel="prefetch" href="/assets/js/116.aea17da1.js"><link rel="prefetch" href="/assets/js/117.f2e5c499.js"><link rel="prefetch" href="/assets/js/118.4ded9ace.js"><link rel="prefetch" href="/assets/js/119.24b0e5fe.js"><link rel="prefetch" href="/assets/js/12.a929a20b.js"><link rel="prefetch" href="/assets/js/120.efc30fc4.js"><link rel="prefetch" href="/assets/js/121.9d07a307.js"><link rel="prefetch" href="/assets/js/122.4ec90e5c.js"><link rel="prefetch" href="/assets/js/123.40937fbf.js"><link rel="prefetch" href="/assets/js/124.e1f314f1.js"><link rel="prefetch" href="/assets/js/125.05bd4ef7.js"><link rel="prefetch" href="/assets/js/126.d4a7faf6.js"><link rel="prefetch" href="/assets/js/127.d2128e03.js"><link rel="prefetch" href="/assets/js/128.a05d604e.js"><link rel="prefetch" href="/assets/js/129.6105945f.js"><link rel="prefetch" href="/assets/js/13.360853c7.js"><link rel="prefetch" href="/assets/js/130.9b8daf1c.js"><link rel="prefetch" href="/assets/js/131.cecfa697.js"><link rel="prefetch" href="/assets/js/132.c95442e6.js"><link rel="prefetch" href="/assets/js/133.539ab718.js"><link rel="prefetch" href="/assets/js/134.cdfce489.js"><link rel="prefetch" href="/assets/js/135.c123dac0.js"><link rel="prefetch" href="/assets/js/136.985a226d.js"><link rel="prefetch" href="/assets/js/137.0aee31b8.js"><link rel="prefetch" href="/assets/js/138.d2509857.js"><link rel="prefetch" href="/assets/js/139.a96a3668.js"><link rel="prefetch" href="/assets/js/14.c195e003.js"><link rel="prefetch" href="/assets/js/140.e19a3e11.js"><link rel="prefetch" href="/assets/js/141.fdc0c06c.js"><link rel="prefetch" href="/assets/js/142.2cd6f75b.js"><link rel="prefetch" href="/assets/js/143.609899b6.js"><link rel="prefetch" href="/assets/js/144.ff242386.js"><link rel="prefetch" href="/assets/js/145.b2b79665.js"><link rel="prefetch" href="/assets/js/146.039accd2.js"><link rel="prefetch" href="/assets/js/147.95319884.js"><link rel="prefetch" href="/assets/js/148.6c1f3479.js"><link rel="prefetch" href="/assets/js/149.eb07bb5f.js"><link rel="prefetch" href="/assets/js/15.549a8f95.js"><link rel="prefetch" href="/assets/js/150.84a65913.js"><link rel="prefetch" href="/assets/js/151.915c8722.js"><link rel="prefetch" href="/assets/js/152.0d23ca3e.js"><link rel="prefetch" href="/assets/js/153.4b006757.js"><link rel="prefetch" href="/assets/js/154.e8667872.js"><link rel="prefetch" href="/assets/js/155.1d66b3f4.js"><link rel="prefetch" href="/assets/js/156.39e659e5.js"><link rel="prefetch" href="/assets/js/157.f281e5ad.js"><link rel="prefetch" href="/assets/js/158.aa34863e.js"><link rel="prefetch" href="/assets/js/159.a640b562.js"><link rel="prefetch" href="/assets/js/16.a4a3b75b.js"><link rel="prefetch" href="/assets/js/160.c14ccadf.js"><link rel="prefetch" href="/assets/js/161.49444813.js"><link rel="prefetch" href="/assets/js/162.d4361af0.js"><link rel="prefetch" href="/assets/js/163.7789f841.js"><link rel="prefetch" href="/assets/js/164.536683be.js"><link rel="prefetch" href="/assets/js/165.e82e5352.js"><link rel="prefetch" href="/assets/js/166.08275b02.js"><link rel="prefetch" href="/assets/js/167.b8b0b20f.js"><link rel="prefetch" href="/assets/js/168.4bc37c3e.js"><link rel="prefetch" href="/assets/js/169.a901cacb.js"><link rel="prefetch" href="/assets/js/17.d0e1d5b9.js"><link rel="prefetch" href="/assets/js/170.4e6b026d.js"><link rel="prefetch" href="/assets/js/171.0d84b945.js"><link rel="prefetch" href="/assets/js/172.00e188a4.js"><link rel="prefetch" href="/assets/js/173.a79d19f4.js"><link rel="prefetch" href="/assets/js/174.5ac8a473.js"><link rel="prefetch" href="/assets/js/175.9d051d34.js"><link rel="prefetch" href="/assets/js/176.e001aacf.js"><link rel="prefetch" href="/assets/js/177.64e39367.js"><link rel="prefetch" href="/assets/js/178.31e998c6.js"><link rel="prefetch" href="/assets/js/179.39575261.js"><link rel="prefetch" href="/assets/js/180.6a9ec275.js"><link rel="prefetch" href="/assets/js/19.066f4710.js"><link rel="prefetch" href="/assets/js/20.47c6945e.js"><link rel="prefetch" href="/assets/js/21.80d08d1a.js"><link rel="prefetch" href="/assets/js/22.0bf68511.js"><link rel="prefetch" href="/assets/js/23.cbd2da20.js"><link rel="prefetch" href="/assets/js/24.39334856.js"><link rel="prefetch" href="/assets/js/25.d2dc6939.js"><link rel="prefetch" href="/assets/js/26.b22f2659.js"><link rel="prefetch" href="/assets/js/27.fafb5d89.js"><link rel="prefetch" href="/assets/js/28.cc4e2dfa.js"><link rel="prefetch" href="/assets/js/29.051e1294.js"><link rel="prefetch" href="/assets/js/30.a43fa163.js"><link rel="prefetch" href="/assets/js/31.6687eda9.js"><link rel="prefetch" href="/assets/js/32.a11764ff.js"><link rel="prefetch" href="/assets/js/33.e3fb0fca.js"><link rel="prefetch" href="/assets/js/34.3a0b017f.js"><link rel="prefetch" href="/assets/js/35.0aa88a05.js"><link rel="prefetch" href="/assets/js/36.72771fbc.js"><link rel="prefetch" href="/assets/js/37.f82581be.js"><link rel="prefetch" href="/assets/js/38.16685a22.js"><link rel="prefetch" href="/assets/js/39.1f26208b.js"><link rel="prefetch" href="/assets/js/4.b776f0a5.js"><link rel="prefetch" href="/assets/js/40.46ab7f6b.js"><link rel="prefetch" href="/assets/js/41.7cb6f967.js"><link rel="prefetch" href="/assets/js/42.d7cd36c2.js"><link rel="prefetch" href="/assets/js/43.1e7c4d50.js"><link rel="prefetch" href="/assets/js/44.84217364.js"><link rel="prefetch" href="/assets/js/45.03dd1cc7.js"><link rel="prefetch" href="/assets/js/46.0b2d4aeb.js"><link rel="prefetch" href="/assets/js/47.59165cbe.js"><link rel="prefetch" href="/assets/js/48.fccb4afc.js"><link rel="prefetch" href="/assets/js/49.4b2640e3.js"><link rel="prefetch" href="/assets/js/5.4c2909d0.js"><link rel="prefetch" href="/assets/js/50.398ab329.js"><link rel="prefetch" href="/assets/js/51.e7ed2c25.js"><link rel="prefetch" href="/assets/js/52.490cf252.js"><link rel="prefetch" href="/assets/js/53.2fe8f7b5.js"><link rel="prefetch" href="/assets/js/54.a93e7e56.js"><link rel="prefetch" href="/assets/js/55.dc954fde.js"><link rel="prefetch" href="/assets/js/56.f5b55acc.js"><link rel="prefetch" href="/assets/js/57.7cd4dc0e.js"><link rel="prefetch" href="/assets/js/58.0ad5311b.js"><link rel="prefetch" href="/assets/js/59.1f4fee35.js"><link rel="prefetch" href="/assets/js/6.bbb54abe.js"><link rel="prefetch" href="/assets/js/60.71759f96.js"><link rel="prefetch" href="/assets/js/61.f4326786.js"><link rel="prefetch" href="/assets/js/62.3e089928.js"><link rel="prefetch" href="/assets/js/63.5f9c9020.js"><link rel="prefetch" href="/assets/js/64.8e972ad5.js"><link rel="prefetch" href="/assets/js/65.f9baf78c.js"><link rel="prefetch" href="/assets/js/66.6e6e1936.js"><link rel="prefetch" href="/assets/js/67.2d59a9ab.js"><link rel="prefetch" href="/assets/js/68.ffe32a4d.js"><link rel="prefetch" href="/assets/js/69.1cfc3fa9.js"><link rel="prefetch" href="/assets/js/7.761dcbd9.js"><link rel="prefetch" href="/assets/js/70.71000823.js"><link rel="prefetch" href="/assets/js/71.ba2bce19.js"><link rel="prefetch" href="/assets/js/72.3281b629.js"><link rel="prefetch" href="/assets/js/73.8e18302a.js"><link rel="prefetch" href="/assets/js/74.0ed4c579.js"><link rel="prefetch" href="/assets/js/75.4f3a1dd2.js"><link rel="prefetch" href="/assets/js/76.0d5688c9.js"><link rel="prefetch" href="/assets/js/77.b5a95948.js"><link rel="prefetch" href="/assets/js/78.cee29896.js"><link rel="prefetch" href="/assets/js/79.7364cccd.js"><link rel="prefetch" href="/assets/js/8.0b37599a.js"><link rel="prefetch" href="/assets/js/80.b3e7e887.js"><link rel="prefetch" href="/assets/js/81.845dc522.js"><link rel="prefetch" href="/assets/js/82.af5b833c.js"><link rel="prefetch" href="/assets/js/83.97404d49.js"><link rel="prefetch" href="/assets/js/84.0e15de87.js"><link rel="prefetch" href="/assets/js/85.4c7f8a2a.js"><link rel="prefetch" href="/assets/js/86.663f8f72.js"><link rel="prefetch" href="/assets/js/87.7e263a3b.js"><link rel="prefetch" href="/assets/js/88.9bde7046.js"><link rel="prefetch" href="/assets/js/89.b97ce8be.js"><link rel="prefetch" href="/assets/js/9.23656f5d.js"><link rel="prefetch" href="/assets/js/90.24ebf178.js"><link rel="prefetch" href="/assets/js/91.839071ab.js"><link rel="prefetch" href="/assets/js/92.b08db120.js"><link rel="prefetch" href="/assets/js/93.9cd39f03.js"><link rel="prefetch" href="/assets/js/94.dbe2b77e.js"><link rel="prefetch" href="/assets/js/95.2de8699b.js"><link rel="prefetch" href="/assets/js/96.7c2e0f96.js"><link rel="prefetch" href="/assets/js/97.6d8d45a0.js"><link rel="prefetch" href="/assets/js/98.df826acd.js"><link rel="prefetch" href="/assets/js/99.f6994c7a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a5fc1f3a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>路漫漫其修远兮，吾将上下而求索</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>一个人可以走的很快，一群人可以走的更远</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>AzureTimez</span>
+            
+          <span data-v-4e82dffc>2013 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpeg" alt="路漫漫其修远兮，吾将上下而求索" class="logo"> <span class="site-name">路漫漫其修远兮，吾将上下而求索</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/qiankun/" class="nav-link"><i class="undefined"></i>
+  qiankun
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react,antd/" class="nav-link"><i class="undefined"></i>
+  react,antd
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Rollup/" class="nav-link"><i class="undefined"></i>
+  Rollup
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue2/" class="nav-link"><i class="undefined"></i>
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue3/" class="nav-link"><i class="undefined"></i>
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JS/" class="nav-link"><i class="undefined"></i>
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Low Code/" class="nav-link"><i class="undefined"></i>
+  Low Code
+</a></li><li class="dropdown-item"><!----> <a href="/categories/性能/" class="nav-link"><i class="undefined"></i>
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/categories/微前端/" class="nav-link"><i class="undefined"></i>
+  微前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可视化/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TS/" class="nav-link"><i class="undefined"></i>
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ES6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ssr/" class="nav-link"><i class="undefined"></i>
+  ssr
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/weapp/" class="nav-link"><i class="undefined"></i>
+  weapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hybrid/" class="nav-link"><i class="undefined"></i>
+  hybrid
+</a></li><li class="dropdown-item"><!----> <a href="/categories/flutter/" class="nav-link"><i class="undefined"></i>
+  flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/electron/" class="nav-link"><i class="undefined"></i>
+  electron
+</a></li><li class="dropdown-item"><!----> <a href="/categories/AST/" class="nav-link"><i class="undefined"></i>
+  AST
+</a></li><li class="dropdown-item"><!----> <a href="/categories/模块化/" class="nav-link"><i class="undefined"></i>
+  模块化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vite/" class="nav-link"><i class="undefined"></i>
+  vite
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器/" class="nav-link"><i class="undefined"></i>
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/categories/gulp/" class="nav-link"><i class="undefined"></i>
+  gulp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/canvas/" class="nav-link"><i class="undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webGL/" class="nav-link"><i class="undefined"></i>
+  webGL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ajax/" class="nav-link"><i class="undefined"></i>
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/categories/fetch/" class="nav-link"><i class="undefined"></i>
+  fetch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GC/" class="nav-link"><i class="undefined"></i>
+  GC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/avatar.jpeg" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    AzureTimez
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>170</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>44</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/qiankun/" class="nav-link"><i class="undefined"></i>
+  qiankun
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react,antd/" class="nav-link"><i class="undefined"></i>
+  react,antd
+</a></li><li class="dropdown-item"><!----> <a href="/categories/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Rollup/" class="nav-link"><i class="undefined"></i>
+  Rollup
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue2/" class="nav-link"><i class="undefined"></i>
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue3/" class="nav-link"><i class="undefined"></i>
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JS/" class="nav-link"><i class="undefined"></i>
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/RN/" class="nav-link"><i class="undefined"></i>
+  RN
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Low Code/" class="nav-link"><i class="undefined"></i>
+  Low Code
+</a></li><li class="dropdown-item"><!----> <a href="/categories/性能/" class="nav-link"><i class="undefined"></i>
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/categories/微前端/" class="nav-link"><i class="undefined"></i>
+  微前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/可视化/" class="nav-link"><i class="undefined"></i>
+  可视化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TS/" class="nav-link"><i class="undefined"></i>
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ES6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ssr/" class="nav-link"><i class="undefined"></i>
+  ssr
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/weapp/" class="nav-link"><i class="undefined"></i>
+  weapp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hybrid/" class="nav-link"><i class="undefined"></i>
+  hybrid
+</a></li><li class="dropdown-item"><!----> <a href="/categories/flutter/" class="nav-link"><i class="undefined"></i>
+  flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/electron/" class="nav-link"><i class="undefined"></i>
+  electron
+</a></li><li class="dropdown-item"><!----> <a href="/categories/AST/" class="nav-link"><i class="undefined"></i>
+  AST
+</a></li><li class="dropdown-item"><!----> <a href="/categories/模块化/" class="nav-link"><i class="undefined"></i>
+  模块化
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vite/" class="nav-link"><i class="undefined"></i>
+  vite
+</a></li><li class="dropdown-item"><!----> <a href="/categories/浏览器/" class="nav-link"><i class="undefined"></i>
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/categories/gulp/" class="nav-link"><i class="undefined"></i>
+  gulp
+</a></li><li class="dropdown-item"><!----> <a href="/categories/canvas/" class="nav-link"><i class="undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webGL/" class="nav-link"><i class="undefined"></i>
+  webGL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Promise/" class="nav-link"><i class="undefined"></i>
+  Promise
+</a></li><li class="dropdown-item"><!----> <a href="/categories/ajax/" class="nav-link"><i class="undefined"></i>
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/categories/fetch/" class="nav-link"><i class="undefined"></i>
+  fetch
+</a></li><li class="dropdown-item"><!----> <a href="/categories/axios/" class="nav-link"><i class="undefined"></i>
+  axios
+</a></li><li class="dropdown-item"><!----> <a href="/categories/GC/" class="nav-link"><i class="undefined"></i>
+  GC
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/docs/xw230429/" aria-current="page" class="sidebar-link">前端体系</a></li><li><a href="/docs/xw230429/xw_230429_1.html" class="sidebar-link">1. JavaScript高级用法(1)</a></li><li><a href="/docs/xw230429/xw_230429_2.html" class="sidebar-link">2 JavaScript高级用法(2)</a></li><li><a href="/docs/xw230429/xw_230429_3.html" class="sidebar-link">3 前端异步处理规范及应用</a></li><li><a href="/docs/xw230429/xw_230429_4.html" class="sidebar-link">4 前端模块化</a></li><li><a href="/docs/xw230429/xw_230429_5.html" class="sidebar-link">5. 浏览器事件模型&amp;请求</a></li><li><a href="/docs/xw230429/xw_230429_6.html" class="sidebar-link">6. JavaScript的垃圾回收和内存泄漏</a></li><li><a href="/docs/xw230429/xw_230429_7.html" aria-current="page" class="active sidebar-link">7. JavaScript的运行机制</a></li><li><a href="/docs/xw230429/xw_230429_8.html" class="sidebar-link">8. 函数式编程</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>7. JavaScript的运行机制</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>AzureTimez</span>
+            
+          <span data-v-4e82dffc>2013 - </span>
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">7. JavaScript的运行机制</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>AzureTimez</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2023/6/25</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>JS</span><span class="tag-item" data-v-1ff7123e>runtime</span></i></div></div> <div class="theme-reco-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#进程与线程">进程与线程</a><ul><li><a href="#什么是进程">什么是进程</a></li><li><a href="#什么是线程">什么是线程</a></li><li><a href="#进程和线程的区别">进程和线程的区别</a></li><li><a href="#多进程和多线程">多进程和多线程</a></li><li><a href="#js为什么是单线程">JS为什么是单线程</a></li><li><a href="#浏览器">浏览器</a></li></ul></li><li><a href="#事件循环-event-loop-基础">事件循环(Event Loop)基础</a><ul><li><a href="#宏任务-macrotask">宏任务(macrotask)</a></li><li><a href="#微任务-microtask">微任务(microtask)</a></li><li><a href="#区分宏任务-微任务">区分宏任务&amp;微任务</a></li><li><a href="#注意点">注意点</a></li></ul></li><li><a href="#完整的event-loop">完整的Event Loop</a></li><li><a href="#promise-async-await">Promise&amp;async/await</a><ul><li><a href="#promise">Promise</a></li><li><a href="#async-await-函数">async/await 函数</a></li><li><a href="#demo">demo</a></li></ul></li><li><a href="#nodejs中的运行机制">NodeJS中的运行机制</a></li></ul></div><p></p> <h2 id="进程与线程"><a href="#进程与线程" class="header-anchor">#</a> 进程与线程</h2> <h3 id="什么是进程"><a href="#什么是进程" class="header-anchor">#</a> 什么是进程</h3> <p>CPU是计算机的核心，承担所有的计算任务。<br>
+官网说法，进程是CPU资源分配的最小单位。<br>
+字面意思就是进行中的程序，我将它理解为一个可以独立运行且拥有自己的资源空间的任务程序，进程包括运行中的程序和程序所使用到的内存和系统资源。<br>
+CPU可以有很多进程，我们的电脑每打开一个软件就会产生一个或多个进程，为什么电脑运行的软件多就会卡，是因为CPU给每个进程分配资源空间，但是一个CPU一共就那么多资源，分出去越多，越卡，每个进程之间是相互独立的，CPU在运行一个进程时，其他的进程处于非运行状态，CPU使用 时间片轮转调度算法 来实现同时运行多个进程。</p> <h3 id="什么是线程"><a href="#什么是线程" class="header-anchor">#</a> 什么是线程</h3> <p>线程是CPU调度的最小单位。<br>
+线程是建立在进程的基础上的一次程序运行单位，通俗点解释线程就是程序中的一个执行流，一个进程可以有多个线程。<br>
+一个进程中只有一个执行流称作单线程，即程序执行时，所走的程序路径按照连续顺序排下来，前面的必须处理好，后面的才会执行。<br>
+一个进程中有多个执行流称作多线程，即在一个程序中可以同时运行多个不同的线程来执行不同的任务， 也就是说允许单个程序创建多个并行执行的线程来完成各自的任务。</p> <h3 id="进程和线程的区别"><a href="#进程和线程的区别" class="header-anchor">#</a> 进程和线程的区别</h3> <p>进程是操作系统分配资源的最小单位，线程是程序执行的最小单位。<br>
+一个进程由一个或多个线程组成，线程可以理解为是一个进程中代码的不同执行路线。<br>
+进程之间相互独立，但同一进程下的各个线程间共享程序的内存空间(包括代码段、数据集、堆等)及一些进程级的资源(如打开文件和信号)。<br>
+调度和切换：线程上下文切换比进程上下文切换要快得多。</p> <h3 id="多进程和多线程"><a href="#多进程和多线程" class="header-anchor">#</a> 多进程和多线程</h3> <ul><li>多进程：多进程指的是在同一个时间里，同一个计算机系统中如果允许两个或两个以上的进程处于运行状态。多进程带来的好处是明显的，比如大家可以在网易云听歌的同时打开编辑器敲代码，编辑器和网易云的进程之间不会相互干扰；</li> <li>多线程：多线程是指程序中包含多个执行流，即在一个程序中可以同时运行多个不同的线程来执行不同的任务，也就是说允许单个程序创建多个并行执行的线程来完成各自的任务；</li></ul> <h3 id="js为什么是单线程"><a href="#js为什么是单线程" class="header-anchor">#</a> JS为什么是单线程</h3> <p>JS的单线程，与它的用途有关。<br>
+作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？<br>
+还有人说js还有Worker线程，对的，为了利用多核CPU的计算能力，HTML5提出Web Worker标准，允许JavaScript脚本创建多个线程，但是子线程是完 全受主线程控制的，而且不得操作DOM。<br>
+所以，这个标准并没有改变JavaScript是单线程的本质。</p> <h3 id="浏览器"><a href="#浏览器" class="header-anchor">#</a> 浏览器</h3> <p>拿Chrome来说，我们每打开一个Tab页就会产生一个进程。</p> <h4 id="浏览器包含哪些进程"><a href="#浏览器包含哪些进程" class="header-anchor">#</a> 浏览器包含哪些进程</h4> <ol><li><p>Browser进程
+a. 浏览器的主进程(负责协调、主控)，该进程只有一个；
+b. 负责浏览器界面显示，与用户交互。如前进，后退等；
+c. 负责各个页面的管理，创建和销毁其他进程；
+d. 将渲染(Renderer)进程得到的内存中的Bitmap(位图)，绘制到用户界面上；
+e. 网络资源的管理，下载等；</p></li> <li><p>第三方插件进程
+a. 每种类型的插件对应一个进程，当使用该插件时才创建；</p></li> <li><p>GPU进程
+a. 该进程也只有一个，用于3D绘制等等；</p></li> <li><p>渲染进程
+a. 即通常所说的浏览器内核(Renderer进程，内部是多线程)；
+b. 每个Tab页面都有一个渲染进程，互不影响；
+c. 主要作用为页面渲染，脚本执行，事件处理等；</p></li></ol> <h4 id="为什么浏览器要多进程"><a href="#为什么浏览器要多进程" class="header-anchor">#</a> 为什么浏览器要多进程</h4> <p>假设浏览器是单进程，那么某个Tab页崩溃了，就影响了整个浏览器，体验有多差？同理如果插件崩溃了也会影响整个浏览器。</p> <p>浏览器进程有很多，每个进程又有很多线程，都会占用内存</p> <h4 id="渲染进程"><a href="#渲染进程" class="header-anchor">#</a> 渲染进程</h4> <p>页面的渲染，JS的执行，事件的循环，都在渲染进程内执行，所以我们要重点了解渲染进程<br>
+渲染进程是多线程的，看渲染进程的一些常用较为主要的线程：</p> <ul><li>GUI渲染线程</li></ul> <ol><li>负责渲染浏览器界面，解析HTML，CSS，构建DOM树和RenderObject树，布局和绘制等；
+a. 解析html代码(HTML代码本质是字符串)转化为浏览器认识的节点，生成DOM树，也就是DOM Tree；
+b. 解析css，生成CSSOM(CSS规则树)；
+c. 把DOM Tree 和CSSOM结合，生成Rendering Tree(渲染树)；</li> <li>当我们修改了一些元素的颜色或者背景色，页面就会重绘(Repaint)；</li> <li>当我们修改元素的尺寸，页面就会回流(Reflow)；</li> <li>当页面需要Repaing和Reflow时GUI线程执行，绘制页面；</li> <li>回流(Reflow)比重绘(Repaint)的成本要高，我们要尽量避免Reflow和Repaint；</li> <li>GUI渲染线程与JS引擎线程是互斥的：
+a. 当JS引擎执行时GUI线程会被挂起(相当于被冻结了)；
+b. GUI更新会被保存在一个队列中等到JS引擎空闲时立即被执行；</li></ol> <ul><li>JS引擎线程</li></ul> <ol><li>JS引擎线程就是JS内核，负责处理Javascript脚本程序(例如V8引擎)；</li> <li>JS引擎线程负责解析Javascript脚本，运行代码；</li> <li>JS引擎一直等待着任务队列中任务的到来，然后加以处理：
+a. 浏览器同时只能有一个JS引擎线程在运行JS程序，所以js是单线程运行的；
+b. 一个Tab页(renderer进程)中无论什么时候都只有一个JS线程在运行JS程序；</li> <li>GUI渲染线程与JS引擎线程是互斥的，js引擎线程会阻塞GUI渲染线程
+a. 就是我们常遇到的JS执行时间过长，造成页面的渲染不连贯，导致页面渲染加载阻塞(就是加载慢)；
+b. 例如浏览器渲染的时候遇到<code>script</code>标签，就会停止GUI的渲染，然后js引擎线程开始工作，执行里面的js代码，等js执行完毕，js引擎线程停止工作，GUI继续渲染下面的内容。所以如果js执行时间太长就会造成页面卡顿的情况；（所以有了<code>defer</code>和<code>async</code>标签）</li></ol> <ul><li>事件触发线程</li></ul> <ol><li>属于浏览器而不是JS引擎，用来控制事件循环，并且管理着一个事件队列(task queue)；</li> <li>当js执行碰到事件绑定和一些异步操作(如setTimeOut，也可来自浏览器内核的其他线程，如鼠标点击、AJAX异步请求等)，会走事件触发线程将对应的事件添加到对应的线程中(比如定时器操作，便把定时器事件添加到定时器线程)，等异步事件有了结果，便把他们的回调操作添加到事件队列，等待js引擎线程空闲时来处理；</li> <li>当对应的事件符合触发条件被触发时，该线程会把事件添加到待处理队列的队尾，等待JS引擎的处理；</li> <li>因为JS是单线程，所以这些待处理队列中的事件都得排队等待JS引擎处理；</li></ol> <ul><li>定时触发器线程</li></ul> <ol><li>setInterval与setTimeout所在线程；</li> <li>浏览器定时计数器并不是由JavaScript引擎计数的(因为JavaScript引擎是单线程的，如果处于阻塞线程状态就会影响记计时的准确)；</li> <li>通过单独线程来计时并触发定时(计时完毕后，添加到事件触发线程的事件队列中，等待JS引擎空闲后执行)，这个线程就是定时触发器线程，也叫定时器线程；</li> <li>W3C在HTML标准中规定，规定要求setTimeout中低于4ms的时间间隔算为4ms；</li></ol> <ul><li>异步http请求线程</li></ul> <ol><li>在XMLHttpRequest在连接后是通过浏览器新开一个线程请求；</li> <li>将检测到状态变更时，如果设置有回调函数，异步线程就产生状态变更事件，将这个回调再放入事件队列中再由JavaScript引擎执行；</li> <li>简单说就是当执行到一个http异步请求时，就把异步请求事件添加到异步请求线程，等收到响应(准确来说应该是http状态变化)，再把回调函数添加到事件队列，等待js引擎线程来执行；</li></ol> <h2 id="事件循环-event-loop-基础"><a href="#事件循环-event-loop-基础" class="header-anchor">#</a> 事件循环(Event Loop)基础</h2> <p>JS分为同步任务和异步任务。同步任务都在主线程(这里的主线程就是JS引擎线程)上执行，会形成一个执行栈。<br>
+主线程之外，事件触发线程管理着一个任务队列，只要异步任务有了运行结果，就在任务队列之中放一个事件回调。一旦执行栈中的所有同步任务执行完毕(也就是JS引擎线程空闲了)，系统就会读取任务队列，将可运行的异步任务(任务队列中的事件回调，只要任务队列中有事件回调，就说明可以执行)添加到执行栈中，开始执行</p> <p>我们来看一段简单的代码：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token function-variable function">setTimeoutCallBack</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是定时器回调'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token function-variable function">httpCallback</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是http请求回调'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 同步任务</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是同步任务1'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 异步定时任务</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>setTimeoutCallBack<span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 异步http请求任务</span>
+ajax<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/info'</span><span class="token punctuation">,</span> httpCallback<span class="token punctuation">)</span>
+
+<span class="token comment">// 同步任务</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是同步任务2'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>​
+以上代码的执行过程：</p> <ol><li>JS是按照顺序从上往下依次执行的，可以先理解为这段代码时的执行环境就是主线程，也就是也就是当前执行栈；</li> <li>首先，执行<code>console.log('我是同步任务1')</code>；</li> <li>接着，执行到<code>setTimeout</code>时，会移交给定时器线程，通知定时器线程 1s 后将<code>setTimeoutCallBack</code>这个回调交给事件触发线程处理，在 1s 后事件触发线程会收到<code>setTimeoutCallBack</code>这个回调并把它加入到事件触发线程所管理的事件队列中等待执行；</li> <li>接着，执行http请求，会移交给异步http请求线程发送网络请求，请求成功后将<code>httpCallback</code>这个回调交由事件触发线程处理，事件触发线程收到 httpCallback 这个回调后把它加入到事件触发线程所管理的事件队列中等待执行；</li> <li>再接着执行<code>console.log('我是同步任务2')</code>；</li> <li>至此主线程执行栈中执行完毕，JS引擎线程已经空闲，开始向事件触发线程发起询问，询问事件触发线程的事件队列中是否有需要执行的回调函数，如果有将事件队列中的回调事件加入执行栈中，开始执行回调，如果事件队列中没有回调，JS引擎线程会一直发起询问，直到有为止；</li></ol> <p>可以发现：</p> <ol><li>定时触发线程只管理定时器且只关注定时不关心结果，定时结束就把回调扔给事件触发线程；</li> <li>异步http请求线程只管理http请求同样不关心结果，请求结束把回调扔给事件触发线程；</li> <li>事件触发线程只关心异步回调入事件队列；</li> <li>JS引擎线程只会执行执行栈中的事件，执行栈中的代码执行完毕，就会读取事件队列中的事件并添加到执行栈中继续执行；</li> <li>反复执行，就是我们所谓的事件循环(Event Loop)；</li></ol> <p><img src="/assets/img/7-1.9845e60f.png" alt="alt 7-1"></p> <ol><li><p>执行栈开始顺序执行；</p></li> <li><p>判断是否为同步，异步则进入异步线程，最终事件回调给事件触发线程的任务队列等待执行，同步继续执行；</p></li> <li><p>执行栈空，询问任务队列中是否有事件回调；</p></li> <li><p>任务队列中有事件回调则把回调加入执行栈末尾继续从第一步开始执行；</p></li> <li><p>任务队列中没有事件回调则不停发起询问；</p></li> <li><p>宏任务&amp; 微任务</p></li></ol> <p>宏任务 -&gt; GUI渲染 -&gt; 宏任务 -&gt; ... 复制代码</p> <h3 id="宏任务-macrotask"><a href="#宏任务-macrotask" class="header-anchor">#</a> 宏任务(<code>macrotask</code>)</h3> <p>在ECMAScript中，<code>macrotask</code>也被称为task。<br>
+我们可以将每次执行栈执行的代码当做是一个宏任务(包括每次从事件队列中获取一个事件回调并放到执行栈中执行)， 每一个宏任务会从头到尾执行完毕，不会执行其他<br>
+由于JS引擎线程和GUI渲染线程是互斥的关系，浏览器为了能够使宏任务和DOM任务有序的进行，会在一个宏任务执行结果后，在下一个宏任务执行前，GUI渲染线程开始工作，对页面进行渲染：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>宏任务 -&gt; GUI渲染 -&gt; 宏任务 -&gt; ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​
+常见的宏任务：</p> <ol><li>主代码块；</li> <li>setTimeout；</li> <li>setInterval；</li> <li>setImmediate ()  -Node；</li> <li>requestAnimationFrame () -浏览器</li></ol> <h3 id="微任务-microtask"><a href="#微任务-microtask" class="header-anchor">#</a> 微任务(<code>microtask</code>)</h3> <p>ES6新引入了Promise标准，同时浏览器实现上多了一个<code>microtask</code>微任务概念，在ECMAScript中，<code>microtask</code>也被称为jobs。</p> <p>我们已经知道宏任务结束后，会执行渲染，然后执行下一个宏任务， 而微任务可以理解成在当前宏任务执行后立即执行的任务。</p> <p>当一个宏任务执行完，会在渲染前，将执行期间所产生的所有微任务都执行完：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>宏任务 -&gt; 微任务 -&gt; GUI渲染 -&gt; 宏任务 -&gt; ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​
+常见微任务</p> <ol><li>process.nextTick () -Node；</li> <li>Promise.then()；</li> <li>catch；</li> <li>finally；</li> <li>Object.observe；</li> <li>MutationObserver；</li></ol> <h3 id="区分宏任务-微任务"><a href="#区分宏任务-微任务" class="header-anchor">#</a> 区分宏任务&amp;微任务</h3> <p>打开新的空白窗口，在console中输入以下代码</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">'background:black'</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">'background:red'</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">'background:blue'</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">'background:pink'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>​
+背景直接渲染了粉红色，根据上文里讲浏览器会先执行完一个宏任务，再执行当前执行栈的所有微任务，然后移交GUI渲染，上面四行代码均属于同一次宏任务，全部执行完才会执行渲染，渲染时GUI线程会将所有UI改动优化合并，所以视觉上，只会看到页面变成粉红色。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">'background:blue'</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">'background:black'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>​
+页面会先卡一下蓝色，再变成黑色背景。之所以会卡一下蓝色，是因为以上代码属于两次宏任务，第一次宏任务执行的代码是将背景变成蓝色，然后触发渲染，将页面变成蓝色，再触发第二次宏任务将背景变成黑色。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">'background:blue'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">'background:pink'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>输出 1 3 2 , 是因为 promise 对象的 then 方法的回调函数是异步执行，所以 2 最后输出<br>
+页面的背景色直接变成粉色，没有经过蓝色的阶段，是因为，我们在宏任务中将背景设置为蓝色，但在进行渲染前执行了微任务， 在微任务中将背景变成了粉色，然后才执行的渲染。</p> <h3 id="注意点"><a href="#注意点" class="header-anchor">#</a> 注意点</h3> <ol><li>浏览器会先执行一个宏任务，紧接着执行当前执行栈产生的微任务，再进行渲染，然后再执行下一个宏任务；</li> <li>微任务和宏任务不在一个任务队列，不在一个任务队列：
+a. 例如<code>setTimeout</code>是一个宏任务，它的事件回调在宏任务队列，<code>Promise.then()</code>是一个微任务，它的事件回调在微任务队列，二者并不是一个任务队列；
+b. 以Chrome 为例，有关渲染的都是在渲染进程中执行，渲染进程中的任务（DOM树构建，js解析…等等）需要主线程执行的任务都会在主线程中执行，而浏览器维护了一套事件循环机制，主线程上的任务都会放到消息队列中执行，主线程会循环消息队列，并从头部取出任务进行执行，如果执行过程中产生其他任务需要主线程执行的，渲染进程中的其他线程会把该任务塞入到消息队列的尾部，消息队列中的任务都是宏任务；
+c. 微任务是如何产生的呢？当执行到script脚本的时候，js引擎会为全局创建一个执行上下文，在该执行上下文中维护了一个微任务队列，当遇到微任务，就会把微任务回调放在微队列中，当所有的js代码执行完毕，在退出全局上下文之前引擎会去检查该队列，有回调就执行，没有就退出执行上下文，这也就是为什么微任务要早于宏任务，也是大家常说的，每个宏任务都有一个微任务队列（由于定时器是浏览器的API，所以定时器是宏任务，在js中遇到定时器会也是放入到浏览器的队列中）；</li></ol> <p><img src="/assets/img/7-2.93e39fa1.png" alt="alt 7-2"></p> <ol><li>首先执行一个宏任务，执行结束后判断是否存在微任务；</li> <li>有微任务先执行所有的微任务，再渲染，没有微任务则直接渲染；</li> <li>然后再接着执行下一个宏任务；</li></ol> <h2 id="完整的event-loop"><a href="#完整的event-loop" class="header-anchor">#</a> 完整的Event Loop</h2> <p><img src="/assets/img/7-3.eeac1372.png" alt="alt 7-3"></p> <p>1.整体的script(作为第一个宏任务)开始执行的时候，会把所有代码分为同步任务、异步任务两部分，同步任务会直接进入主线程依次执行，异步任务会再分为宏任务和微任务；
+2. 宏任务进入到<code>Event Table</code>中，并在里面注册回调函数，每当指定的事件完成时，<code>Event Table</code>会将这个函数移到<code>Event Queue</code>中；
+3. 微任务也会进入到另一个<code>Event Table</code>中，并在里面注册回调函数，每当指定的事件完成时，<code>Event Table</code>会将这个函数移到<code>Event Queue</code>中；
+4. 当主线程内的任务执行完毕，主线程为空时，会检查微任务的<code>Event Queue</code>，如果有任务，就全部执行，如果没有就执行下一个宏任务；
+5. 上述过程会不断重复，这就是Event Loop；</p> <h2 id="promise-async-await"><a href="#promise-async-await" class="header-anchor">#</a> Promise&amp;async/await</h2> <h3 id="promise"><a href="#promise" class="header-anchor">#</a> Promise</h3> <p><code>new Promise(() =&gt; {}).then()</code>中，前面的 new Promise() 这一部分是一个构造函数，这是一个同步任务，后面的 .then() 才是一个异步微任务：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token comment">// 上面代码输出1 3 2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>​</p> <h3 id="async-await-函数"><a href="#async-await-函数" class="header-anchor">#</a> async/await 函数</h3> <p>async/await本质上还是基于Promise的一些封装，而Promise是属于微任务的一种<br>
+所以在使用await关键字与Promise.then效果类似，await 以前的代码，相当于与 new Promise 的同步代码，await 以后的代码相当于 Promise.then的异步</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment">// 输出1 2 3 4</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>​</p> <h3 id="demo"><a href="#demo" class="header-anchor">#</a> demo</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// timer1</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// timer2</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// timer3</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// timer4</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 输出1，4，8，7，3，6，5，2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><p>​</p> <ol><li>JS是顺序从上而下执行；</li> <li>执行到test()，test方法为同步，直接执行<code>console.log(1)</code>打印1；</li> <li>test方法中<code>setTimeout</code>为异步宏任务，回调我们把它记做timer1放入宏任务队列；</li> <li>test方法下面有一个<code>setTimeout</code>为异步宏任务，回调我们把它记做timer2放入宏任务队列；</li> <li>执行promise，<code>new Promise</code>是同步任务，直接执行，打印4；</li> <li><code>new Promise</code>里面的<code>setTimeout</code>是异步宏任务，回调我们记做timer3放到宏任务队列；</li> <li><code>Promise.then</code>是微任务，放到微任务队列；</li> <li><code>console.log(8)</code>是同步任务，直接执行，打印8；</li> <li>主线程任务执行完毕，检查微任务队列中有<code>Promise.then</code>；</li> <li>开始执行微任务，发现有<code>setTimeout</code>是异步宏任务，记做timer4放到宏任务队列；</li> <li>微任务队列中的<code>console.log(7)</code>是同步任务，直接执行，打印7；</li> <li>微任务执行完毕，第一次循环结束；</li> <li>检查宏任务队列，里面有timer1、timer2、timer3、timer4，四个定时器宏任务，按照定时器延迟时间得到可以执行的顺序，即Event Queue：timer2、timer4、timer3、timer1，依次拿出放入执行栈末尾执行；</li> <li>执行timer2，<code>console.log(3)</code>为同步任务，直接执行，打印3；</li> <li>检查没有微任务，第二次Event Loop结束；</li> <li>执行timer4，<code>console.log(6)</code>为同步任务，直接执行，打印6；</li> <li>检查没有微任务，第三次Event Loop结束；</li> <li>执行timer3，<code>console.log(5)</code>同步任务，直接执行，打印5；</li> <li>检查没有微任务，第四次Event Loop结束；</li> <li>执行timer1，<code>console.log(2)</code>同步任务，直接执行，打印2；</li> <li>检查没有微任务，也没有宏任务，第五次Event Loop结束；</li></ol> <h2 id="nodejs中的运行机制"><a href="#nodejs中的运行机制" class="header-anchor">#</a> NodeJS中的运行机制</h2> <p>虽然NodeJS中的JavaScript运行环境也是V8，也是单线程，但是，还是有一些与浏览器中的表现是不一样的。<br>
+其实nodejs与浏览器的区别，就是nodejs的宏任务分好几种类型，而这好几种又有不同的任务队列，而不同的任务队列又有顺序区别，而微任务是穿插在每一种宏任务之间的。<br>
+在node环境下，process.nextTick的优先级高于Promise，可以简单理解为在宏任务结束后会先执行微任务队列中的nextTickQueue部分，然后才会执行微任务中的Promise部分。</p> <p><img src="/assets/img/7-4.afc8ff64.png" alt="alt 7-4"></p> <p>NodeJS的Event Loop：</p> <ol><li>Node会先执行所有类型为 timers 的<code>MacroTask</code>，然后执行所有的<code>MicroTask</code>(<code>NextTick</code>例外)；</li> <li>进入 poll 阶段，执行几乎所有<code>MacroTask</code>，然后执行所有的<code>MicroTask</code>；</li> <li>再执行所有类型为 check 的<code>MacroTask</code>，然后执行所有的<code>MicroTask</code>；</li> <li>再执行所有类型为<code>close callbacks</code>的<code>MacroTask</code>，然后执行所有的<code>MicroTask</code>；</li> <li>至此，完成一个 Tick，回到 timers 阶段，重复执行；</li></ol></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/docs/xw230429/xw_230429_6.html" class="prev">
+            6. JavaScript的垃圾回收和内存泄漏
+          </a></span> <span class="next"><a href="/docs/xw230429/xw_230429_8.html">
+            8. 函数式编程
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-70334359></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.e36a6f16.js" defer></script><script src="/assets/js/3.c46e8d0c.js" defer></script><script src="/assets/js/1.ae8c2f5c.js" defer></script><script src="/assets/js/18.6ff5524b.js" defer></script>
+  </body>
+</html>
